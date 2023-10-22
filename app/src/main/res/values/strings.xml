@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Spendify</string>
+    <string name="titulo_crear_una_cuenta">Crear una cuenta</string>
+    <string name="texto_crear_cuenta">Descubre cómo tomar el control de tu dinero con\n nuestras guías detalladas y herramientas\npersonalizadas.</string>
 </resources>
