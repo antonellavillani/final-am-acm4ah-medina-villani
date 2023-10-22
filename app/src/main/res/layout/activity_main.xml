@@ -6,52 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titulo_crear_una_cuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="88dp"
-        android:text="@string/titulo_crear_una_cuenta"
-        android:textSize="24sp"
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="732dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/green_background">
 
-    <TextView
-        android:id="@+id/texto_crear_cuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/texto_crear_cuenta"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
+        <TextView
+            android:id="@+id/titulo_crear_una_cuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="88dp"
+            android:text="@string/titulo_crear_una_cuenta"
+            android:textSize="24sp"
+            android:fontFamily="@font/TT_Interphases_ExtraBold"
+            android:textColor="@color/lima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/texto_correo_electronico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/texto_correo_electronico"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto_crear_cuenta" />
+        <TextView
+            android:id="@+id/texto_crear_cuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/texto_crear_cuenta"
+            android:textSize="12sp"
+            android:fontFamily="@font/TT_Interphases_Light"
+            android:textColor="@color/lima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
 
-    <EditText
-        android:id="@+id/texto_ingresar_correo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="9dp"
-        android:autofillHints="yes"
-        android:ems="17"
-        android:hint="@string/hint_correo_electronico"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:textColorHint="@color/lima"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto_correo_electronico" />
+        <TextView
+            android:id="@+id/texto_correo_electronico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/texto_correo_electronico"
+            android:textSize="12sp"
+            android:fontFamily="@font/TT_Interphases_DemiBold"
+            android:textColor="@color/lima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/texto_crear_cuenta" />
+
+        <EditText
+            android:id="@+id/texto_ingresar_correo"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="9dp"
+            android:autofillHints="yes"
+            android:ems="17"
+            android:fontFamily="@font/TT_Interphases_Light"
+            android:hint="@string/hint_correo_electronico"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColorHint="@color/lima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/texto_correo_electronico" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
