@@ -9,5 +9,7 @@
     <string name="texto_correo_electronico">Correo electrónico</string>
     <string name="hint_correo_electronico">jane_doe@example.com</string>
     <string name="boton_continuar">Continuar</string>
+    <string name="logo_app">Logo de la aplicación</string>
+    <string name="imagen_nombre_app">Nombre de la aplicación</string>
 
 </resources>

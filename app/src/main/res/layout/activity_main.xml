@@ -2,26 +2,55 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="408dp"
+        android:layout_height="46dp"
+        android:background="@color/lima"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imagen_logo"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo_app"/>
+
+        <ImageView
+            android:id="@+id/imagen_name_app"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            android:src="@drawable/name_app"
+            android:contentDescription="@string/imagen_nombre_app"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="412dp"
-        android:layout_height="732dp"
+        android:layout_height="690dp"
         android:background="@color/green_background"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf=""
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
             android:id="@+id/titulo_crear_una_cuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/TT_Interphases_ExtraBold"
             android:text="@string/titulo_crear_una_cuenta"
             android:textColor="@color/lima"
@@ -62,28 +91,26 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="9dp"
             android:autofillHints="yes"
+            android:background="@drawable/edit_text_border"
             android:ems="17"
             android:fontFamily="@font/TT_Interphases_Light"
             android:hint="@string/hint_correo_electronico"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textSize="15sp"
             android:textColorHint="@color/lima"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/texto_correo_electronico"
-            android:background="@drawable/edit_text_border"/>
+            app:layout_constraintTop_toBottomOf="@+id/texto_correo_electronico" />
 
         <Button
             android:id="@+id/boton_continuar"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:text="@string/boton_continuar"
             android:layout_marginTop="7dp"
             android:backgroundTint="@color/lima"
-            android:textColor="@color/verde_oscuro"
-            />
-
+            android:text="@string/boton_continuar"
+            android:textColor="@color/verde_oscuro" />
 
     </LinearLayout>
 
