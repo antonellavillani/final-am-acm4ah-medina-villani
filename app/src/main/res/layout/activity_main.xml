@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <TextView
         android:id="@+id/titulo_crear_una_cuenta"
         android:layout_width="wrap_content"
@@ -28,5 +27,31 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
+
+    <TextView
+        android:id="@+id/texto_correo_electronico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/texto_correo_electronico"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_crear_cuenta" />
+
+    <EditText
+        android:id="@+id/texto_ingresar_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="9dp"
+        android:autofillHints="yes"
+        android:ems="17"
+        android:hint="@string/hint_correo_electronico"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColorHint="@color/lima"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_correo_electronico" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
