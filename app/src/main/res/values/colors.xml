@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+
+
+    // Colores claros
     <color name="white">#FFFFFFFF</color>
-    <color name="green_background">#59981A</color>
     <color name="lima">#EDFFCC</color>
+
+    // Colores oscuros
+    <color name="black">#FF000000</color>
     <color name="verde_oscuro">#3B5704</color>
+
+    // Color del background
+    <color name="green_background">#59981A</color>
+
+
 </resources>
