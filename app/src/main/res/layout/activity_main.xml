@@ -9,12 +9,12 @@
     <LinearLayout
         android:layout_width="412dp"
         android:layout_height="732dp"
+        android:background="@color/green_background"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/green_background">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/titulo_crear_una_cuenta"
@@ -22,10 +22,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="88dp"
-            android:text="@string/titulo_crear_una_cuenta"
-            android:textSize="24sp"
             android:fontFamily="@font/TT_Interphases_ExtraBold"
+            android:text="@string/titulo_crear_una_cuenta"
             android:textColor="@color/lima"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,10 +35,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="8dp"
-            android:text="@string/texto_crear_cuenta"
-            android:textSize="12sp"
             android:fontFamily="@font/TT_Interphases_Light"
+            android:text="@string/texto_crear_cuenta"
             android:textColor="@color/lima"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
 
@@ -48,16 +48,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="36dp"
-            android:text="@string/texto_correo_electronico"
-            android:textSize="12sp"
             android:fontFamily="@font/TT_Interphases_DemiBold"
+            android:text="@string/texto_correo_electronico"
             android:textColor="@color/lima"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/texto_crear_cuenta" />
 
         <EditText
             android:id="@+id/texto_ingresar_correo"
-            android:layout_width="344dp"
+            android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="9dp"
@@ -70,6 +70,18 @@
             android:textColorHint="@color/lima"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/texto_correo_electronico" />
+
+        <Button
+            android:id="@+id/boton_continuar"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="@string/boton_continuar"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="@color/lima"
+            android:textColor="@color/verde_oscuro"
+            />
+
 
     </LinearLayout>
 

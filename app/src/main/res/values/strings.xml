@@ -4,4 +4,5 @@
     <string name="texto_crear_cuenta">Descubre cómo tomar el control de tu dinero con\n nuestras guías detalladas y herramientas\npersonalizadas.</string>
     <string name="texto_correo_electronico">Correo electrónico</string>
     <string name="hint_correo_electronico">jane_doe@example.com</string>
+    <string name="boton_continuar">Continuar</string>
 </resources>
