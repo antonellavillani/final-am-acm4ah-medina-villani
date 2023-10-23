@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="50dp"
-
+                android:fontFamily="@font/tt_interphases_extra_bold"
                 android:text="@string/titulo_crear_una_cuenta"
                 android:textColor="@color/lima"
                 android:textSize="24sp"
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="8dp"
-
+                android:fontFamily="@font/tt_interphases_light"
                 android:text="@string/texto_crear_cuenta"
                 android:textColor="@color/lima"
                 android:textSize="12sp"
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="36dp"
-
+                android:fontFamily="@font/tt_interphases_demi_bold"
                 android:text="@string/texto_correo_electronico"
                 android:textColor="@color/lima"
                 android:textSize="12sp"
@@ -110,7 +110,7 @@
                 android:autofillHints="yes"
                 android:background="@drawable/edit_text_border"
                 android:ems="17"
-
+                android:fontFamily="@font/tt_interphases_light"
                 android:hint="@string/hint_correo_electronico"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
