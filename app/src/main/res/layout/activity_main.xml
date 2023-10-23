@@ -84,7 +84,7 @@
                 android:fontFamily="@font/tt_interphases_light"
                 android:text="@string/texto_crear_cuenta"
                 android:textColor="@color/lima"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
 
