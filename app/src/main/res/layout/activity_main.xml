@@ -154,7 +154,7 @@
                 android:src="@drawable/linea_separadora" />
 
             <Button
-                android:id="@+id/continuar_google"
+                android:id="@+id/boton_continuar_google"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -170,7 +170,7 @@
                 />
 
             <Button
-                android:id="@+id/continuar_facebook"
+                android:id="@+id/boton_continuar_facebook"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -206,16 +206,35 @@
                 android:textSize="9sp"
                 />
 
-            <TextView
-                android:id="@+id/text_terminosYpoliticas"
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_terminosPoliticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tex_terminos_y_politica"
-                android:layout_marginLeft="100dp"
-                android:fontFamily="@font/tt_interphases_demi_bold"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp"
-                />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_terminos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:fontFamily="@font/tt_interphases_demi_bold"
+                    android:text="@string/tex_terminos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/text_politicas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="@font/tt_interphases_demi_bold"
+                    android:text="@string/text_politicasPrivacidad"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
 
 
         </LinearLayout>
