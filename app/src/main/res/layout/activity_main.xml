@@ -36,15 +36,15 @@
                 android:id="@+id/imagen_logo"
                 android:layout_width="72dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="@dimen/medida100"
                 android:contentDescription="@string/logo_app"
                 android:src="@drawable/logo" />
 
             <ImageView
                 android:id="@+id/imagen_name_app"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/medida100"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="100dp"
+                android:layout_marginEnd="@dimen/medida100"
                 android:contentDescription="@string/imagen_nombre_app"
                 android:src="@drawable/name_app" />
 
@@ -66,12 +66,12 @@
                 android:id="@+id/titulo_crear_una_cuenta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="@dimen/medida28"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/tt_interphases_extra_bold"
                 android:text="@string/titulo_crear_una_cuenta"
                 android:textColor="@color/lima"
-                android:textSize="24sp"
+                android:textSize="@dimen/fuenteTitulo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,12 +79,11 @@
                 android:id="@+id/texto_crear_cuenta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="8dp"
-
+                android:layout_marginStart="@dimen/medida28"
+                android:layout_marginTop="@dimen/medida7"
                 android:text="@string/texto_crear_cuenta"
                 android:textColor="@color/lima"
-                android:textSize="14sp"
+                android:textSize="@dimen/fuenteParrafo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
 
@@ -92,21 +91,21 @@
                 android:id="@+id/texto_correo_electronico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginStart="@dimen/medida28"
+                android:layout_marginTop="@dimen/medida35"
                 android:fontFamily="@font/tt_interphases_demi_bold"
                 android:text="@string/texto_correo_electronico"
                 android:textColor="@color/lima"
-                android:textSize="12sp"
+                android:textSize="@dimen/fuente12"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/texto_crear_cuenta" />
 
             <EditText
                 android:id="@+id/texto_ingresar_correo"
-                android:layout_width="360dp"
+                android:layout_width="@dimen/medida360"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="9dp"
+                android:layout_marginTop="@dimen/medida7"
                 android:autofillHints="yes"
                 android:background="@drawable/edit_text_border"
                 android:ems="17"
@@ -124,8 +123,8 @@
                 android:id="@+id/boton_continuar"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginStart="@dimen/medida25"
+                android:layout_marginTop="8dp"
                 android:backgroundTint="@color/lima"
                 android:text="@string/boton_continuar"
                 android:textColor="@color/verde_oscuro"/>
@@ -147,18 +146,18 @@
                 android:id="@+id/linea_separadora"
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="35dp"
+                android:layout_marginStart="@dimen/medida35"
+                android:layout_marginTop="@dimen/medida35"
+                android:layout_marginEnd="@dimen/medida35"
                 android:contentDescription="@string/imagen_linea_separadora"
                 android:src="@drawable/linea_separadora" />
 
             <Button
                 android:id="@+id/boton_continuar_google"
-                android:layout_width="360dp"
+                android:layout_width="@dimen/medida360"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginStart="@dimen/medida20"
+                android:layout_marginTop="@dimen/medida25"
                 android:backgroundTint="@color/verde_oscuro"
                 android:text="@string/continuar_google"
                 android:textColor="@color/lima"
@@ -171,10 +170,10 @@
 
             <Button
                 android:id="@+id/boton_continuar_facebook"
-                android:layout_width="360dp"
+                android:layout_width="@dimen/medida360"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginStart="@dimen/medida20"
+                android:layout_marginTop="@dimen/medida25"
                 android:backgroundTint="@color/verde_oscuro"
                 android:text="@string/continuar_google"
                 android:textColor="@color/lima"
@@ -187,12 +186,12 @@
                 android:id="@+id/text_ya_tienes_una_cuenta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="@dimen/medida100"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/tt_interphases_demi_bold"
                 android:text="@string/ya_tienes_una_cuenta"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/fuente12" />
 
 
             <TextView
@@ -200,9 +199,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aceptas_terminos"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="@dimen/medida100"
                 android:layout_marginLeft="140dp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="9sp"
                 />
 
@@ -217,11 +216,11 @@
                     android:id="@+id/text_terminos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="@dimen/medida100"
                     android:fontFamily="@font/tt_interphases_demi_bold"
                     android:text="@string/tex_terminos"
-                    android:textColor="#FFFFFF"
-                    android:textSize="10sp" />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fuente10" />
 
                 <TextView
                     android:id="@+id/text_politicas"
@@ -230,8 +229,8 @@
                     android:layout_marginLeft="2dp"
                     android:fontFamily="@font/tt_interphases_demi_bold"
                     android:text="@string/text_politicasPrivacidad"
-                    android:textColor="#FFFFFF"
-                    android:textSize="10sp" />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fuente10" />
             </LinearLayout>
 
 
