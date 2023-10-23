@@ -16,4 +16,9 @@
     // Descripcion de la imagen del nombre de la app
     <string name="imagen_nombre_app">Nombre de la aplicación</string>
 
+    <string name="imagen_linea_separadora">imagen_linea_separadora</string>
+    <string name="continuar_google">Continuar con google</string>
+    <string name="continuar_facebook">Continuar con Facebook</string>
+
+
 </resources>
