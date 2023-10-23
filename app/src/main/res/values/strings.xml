@@ -3,13 +3,17 @@
     // Name app
     <string name="app_name">Spendify</string>
 
-    //Pantalla "Crea una cuenta"
+    // Pantalla "Crea una cuenta"
     <string name="titulo_crear_una_cuenta">Crea una cuenta</string>
     <string name="texto_crear_cuenta">Descubre cómo tomar el control de tu dinero con\nnuestras guías detalladas y herramientas\npersonalizadas.</string>
     <string name="texto_correo_electronico">Correo electrónico</string>
     <string name="hint_correo_electronico">jane_doe@example.com</string>
     <string name="boton_continuar">Continuar</string>
+
+    // Descripcion del logo de la app
     <string name="logo_app">Logo de la aplicación</string>
+
+    // Descripcion de la imagen del nombre de la app
     <string name="imagen_nombre_app">Nombre de la aplicación</string>
 
 </resources>
