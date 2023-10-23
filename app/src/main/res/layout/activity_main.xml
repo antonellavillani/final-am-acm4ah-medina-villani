@@ -194,13 +194,34 @@
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
+
+            <TextView
+                android:id="@+id/text_aceptas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aceptas_terminos"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="140dp"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                />
+
+            <TextView
+                android:id="@+id/text_terminosYpoliticas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tex_terminos_y_politica"
+                android:layout_marginLeft="100dp"
+                android:fontFamily="@font/tt_interphases_demi_bold"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                />
+
+
         </LinearLayout>
 
 
-
     </LinearLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

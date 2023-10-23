@@ -20,5 +20,7 @@
     <string name="continuar_google">Continuar con google</string>
     <string name="continuar_facebook">Continuar con Facebook</string>
     <string name="ya_tienes_una_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
+    <string name="aceptas_terminos">Al continuar, aceptas nuestros</string>
+    <string name="tex_terminos_y_politica">Términos de servicio y Política de privacidad</string>
 
 </resources>
