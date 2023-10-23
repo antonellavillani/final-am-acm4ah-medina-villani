@@ -128,7 +128,7 @@
                 android:layout_marginTop="7dp"
                 android:backgroundTint="@color/lima"
                 android:text="@string/boton_continuar"
-                android:textColor="@color/verde_oscuro" />
+                android:textColor="@color/verde_oscuro"/>
 
 
         </LinearLayout>
@@ -161,7 +161,7 @@
                 android:layout_marginTop="25dp"
                 android:background="@drawable/edit_text_border"
                 android:text="@string/continuar_google"
-                android:textColor="#FFFFFF"
+                android:textColor="@drawable/txt_botones_google_fb"
                 app:icon="@drawable/google_icon"
 
                 app:layout_constraintStart_toStartOf="parent"
@@ -176,7 +176,8 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/edit_text_border"
-                android:text="@string/continuar_facebook"
+                android:text="@string/continuar_google"
+                android:textColor="@drawable/txt_botones_google_fb"
                 app:icon="@drawable/facebook_icon"
 
 
