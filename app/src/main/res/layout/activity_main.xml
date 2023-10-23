@@ -175,7 +175,7 @@
                 android:layout_marginStart="@dimen/medida20"
                 android:layout_marginTop="@dimen/medida25"
                 android:backgroundTint="@color/verde_oscuro"
-                android:text="@string/continuar_google"
+                android:text="@string/continuar_facebook"
                 android:textColor="@color/lima"
                 app:icon="@drawable/facebook_icon"
 
