@@ -19,6 +19,6 @@
     <string name="imagen_linea_separadora">imagen_linea_separadora</string>
     <string name="continuar_google">Continuar con google</string>
     <string name="continuar_facebook">Continuar con Facebook</string>
-
+    <string name="ya_tienes_una_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
 
 </resources>

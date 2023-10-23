@@ -2,130 +2,158 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout_Header"
-        android:layout_width="408dp"
-        android:layout_height="46dp"
-        android:background="@color/lima"
-        android:orientation="horizontal"
-        android:visibility="visible"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imagen_logo"
-            android:layout_width="72dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:contentDescription="@string/logo_app"
-            android:src="@drawable/logo" />
-
-        <ImageView
-            android:id="@+id/imagen_name_app"
-            android:layout_width="99dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="100dp"
-            android:contentDescription="@string/imagen_nombre_app"
-            android:src="@drawable/name_app" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_arriba"
-        android:layout_width="412dp"
-        android:layout_height="690dp"
+        android:id="@+id/LinearLayout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@color/green_background"
         android:orientation="vertical"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_Header">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
-        <TextView
-            android:id="@+id/titulo_crear_una_cuenta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="50dp"
 
-            android:text="@string/titulo_crear_una_cuenta"
-            android:textColor="@color/lima"
-            android:textSize="24sp"
+        <LinearLayout
+            android:id="@+id/linearLayout_Header"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/lima"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
 
-        <TextView
-            android:id="@+id/texto_crear_cuenta"
-            android:layout_width="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/imagen_logo"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:contentDescription="@string/logo_app"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/imagen_name_app"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:contentDescription="@string/imagen_nombre_app"
+                android:src="@drawable/name_app" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_mitadArriba"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="8dp"
-
-            android:text="@string/texto_crear_cuenta"
-            android:textColor="@color/lima"
-            android:textSize="12sp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="@id/linearLayout_Header"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/LinearLayout_mitadAbajo">
 
-        <TextView
-            android:id="@+id/texto_correo_electronico"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/titulo_crear_una_cuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="50dp"
+
+                android:text="@string/titulo_crear_una_cuenta"
+                android:textColor="@color/lima"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/texto_crear_cuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+
+                android:text="@string/texto_crear_cuenta"
+                android:textColor="@color/lima"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titulo_crear_una_cuenta" />
+
+            <TextView
+                android:id="@+id/texto_correo_electronico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="36dp"
+
+                android:text="@string/texto_correo_electronico"
+                android:textColor="@color/lima"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/texto_crear_cuenta" />
+
+            <EditText
+                android:id="@+id/texto_ingresar_correo"
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="9dp"
+                android:autofillHints="yes"
+                android:background="@drawable/edit_text_border"
+                android:ems="17"
+
+                android:hint="@string/hint_correo_electronico"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/lima"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texto_correo_electronico" />
+
+            <Button
+                android:id="@+id/boton_continuar"
+                android:layout_width="359dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="7dp"
+                android:backgroundTint="@color/lima"
+                android:text="@string/boton_continuar"
+                android:textColor="@color/verde_oscuro" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_mitadAbajo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="36dp"
-
-            android:text="@string/texto_correo_electronico"
-            android:textColor="@color/lima"
-            android:textSize="12sp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@id/linearLayout_mitadArriba"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/texto_crear_cuenta" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-        <EditText
-            android:id="@+id/texto_ingresar_correo"
-            android:layout_width="366dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="9dp"
-            android:autofillHints="yes"
-            android:background="@drawable/edit_text_border"
-            android:ems="17"
+            <ImageView
+                android:id="@+id/linea_separadora"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:contentDescription="@string/imagen_linea_separadora"
+                android:src="@drawable/linea_separadora" />
 
-            android:hint="@string/hint_correo_electronico"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp"
-            android:textColorHint="@color/lima"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/texto_correo_electronico" />
-
-        <Button
-            android:id="@+id/boton_continuar"
-            android:layout_width="359dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="7dp"
-            android:backgroundTint="@color/lima"
-            android:text="@string/boton_continuar"
-            android:textColor="@color/verde_oscuro" />
-
-
-        <ImageView
-            android:id="@+id/linea_separadora"
-            android:layout_width="wrap_content"
-            android:layout_height="10dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="35dp"
-            android:contentDescription="@string/imagen_linea_separadora"
-            android:src="@drawable/linea_separadora" />
-
-        <Button
+            <Button
                 android:id="@+id/continuar_google"
                 android:layout_width="366dp"
                 android:layout_height="wrap_content"
@@ -134,12 +162,12 @@
                 android:background="@drawable/edit_text_border"
                 android:text="@string/continuar_google"
                 android:textColor="#FFFFFF"
-                android:textColorHighlight="#000000"
-                android:textColorLink="#000000"
-
                 app:icon="@drawable/google_icon"
+
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
 
             <Button
                 android:id="@+id/continuar_facebook"
@@ -150,16 +178,30 @@
                 android:background="@drawable/edit_text_border"
                 android:text="@string/continuar_facebook"
                 app:icon="@drawable/facebook_icon"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
 
 
                 />
 
+            <TextView
+                android:id="@+id/textView"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/ya_tienes_una_cuenta"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+
+
+        </LinearLayout>
 
 
 
     </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
