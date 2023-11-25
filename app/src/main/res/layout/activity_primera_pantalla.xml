@@ -6,4 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".PrimeraPantallaActivity">
 
+    <!-- LinearLayout para el background -->
+    <LinearLayout
+        android:id="@+id/LinearLayout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_yellow_background"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <!-- LinearLayout para el logo y nombre de la app -->
+        <LinearLayout
+            android:id="@+id/LinearLayout_AppIdentity"
+            android:layout_width="@dimen/medida360"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp">
+
+            <ImageView
+                android:id="@+id/AppIdentity"
+                android:layout_width="wrap_content"
+                android:layout_height="296dp"
+                android:contentDescription="@string/app_identity"
+                android:src="@drawable/app_identity_primera_pantalla" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_Boton_Comenzar"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp">
+
+            <TextView
+                android:id="@+id/textView_Encabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/encabezado_primera_pantalla"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="@dimen/fuenteTitulo"
+                app:layout_constraintTop_toBottomOf="@id/LinearLayout_AppIdentity"
+                app:layout_constraintStart_toStartOf="@id/LinearLayout_AppIdentity"
+                app:layout_constraintEnd_toEndOf="@id/LinearLayout_AppIdentity"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/textView_TextoDescriptivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_descriptivo_primera_pantalla"
+                android:textSize="@dimen/fuenteParrafo"
+                android:textColor="@color/verde_oscuro"
+                app:layout_constraintTop_toBottomOf="@id/textView_Encabezado"
+                app:layout_constraintStart_toStartOf="@id/LinearLayout_AppIdentity"
+                app:layout_constraintEnd_toEndOf="@id/LinearLayout_AppIdentity"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/boton_comenzar"
+                android:layout_width="@dimen/medida360"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_comenzar"
+                android:textColor="@color/lima"
+                android:backgroundTint="@color/verde_oscuro"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/textView_TextoDescriptivo"
+                app:layout_constraintStart_toStartOf="@id/LinearLayout_AppIdentity"
+                app:layout_constraintEnd_toEndOf="@id/LinearLayout_AppIdentity"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
