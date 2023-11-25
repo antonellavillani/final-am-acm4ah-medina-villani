@@ -8,7 +8,7 @@
     <!-- Borde -->
     <stroke
         android:width="2dp"
-        android:color="#2E4736" />
+        android:color="@color/verde_oscuro" />
 
     <!-- Esquinas redondas -->
     <corners android:radius="10dp" />

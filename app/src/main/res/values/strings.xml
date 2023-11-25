@@ -16,4 +16,17 @@
     // Descripcion de la imagen del nombre de la app
     <string name="imagen_nombre_app">Nombre de la aplicación</string>
 
+    <string name="imagen_linea_separadora">imagen_linea_separadora</string>
+
+    //Botones
+    <string name="continuar_google">Continuar con google</string>
+    <string name="continuar_facebook">Continuar con Facebook</string>
+
+    //Textos del final
+    <string name="ya_tienes_una_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
+
+    <string name="aceptas_terminos">Al continuar, aceptas nuestros</string>
+    <string name="tex_terminos">Términos de servicio y</string>
+    <string name="text_politicasPrivacidad">Politicas de privacidad</string>
+
 </resources>
