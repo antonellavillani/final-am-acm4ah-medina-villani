@@ -12,18 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Spendify"
         tools:targetApi="31">
+
+        <!-- ACTIVITY PANTALLA INICIAR SESION-->
+        <activity
+            android:name=".PantallaIniciarSesion"
+            android:exported="false" />
+
+        <!-- ACTIVITY PRIMERA PANTALLA-->
         <activity
             android:name=".PrimeraPantallaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- ACTIVITY PANTALLA CREAR UNA CUENTA-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>
