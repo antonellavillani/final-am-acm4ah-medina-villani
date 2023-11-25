@@ -12,6 +12,7 @@
 
     // Color del background
     <color name="green_background">#59981A</color>
+    <color name="light_yellow_background">#EDFFCC</color>
 
 
 </resources>

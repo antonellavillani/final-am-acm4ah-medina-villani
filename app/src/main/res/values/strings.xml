@@ -3,19 +3,27 @@
     // Name app
     <string name="app_name">Spendify</string>
 
-    // Pantalla "Crea una cuenta"
+    // Primera pantalla
+
+    // Títulos y textos
+    <string name="encabezado_primera_pantalla">Tu compañero financiero personal</string>
+    <string name="texto_descriptivo_primera_pantalla">Toma el control de tus finanzas de manera sencilla y efectiva.</string>
+
+    // Descripción de imágenes
+    <string name="app_identity">Logo de la aplicación Spendify y eslogan</string>
+
+    // ---------------------------------------------------------------------
+
+    // Pantalla MainActivity "Crea una cuenta"
     <string name="titulo_crear_una_cuenta">Crea una cuenta</string>
     <string name="texto_crear_cuenta">Descubre cómo tomar el control de tu dinero con\nnuestras guías detalladas y herramientas\npersonalizadas.</string>
     <string name="texto_correo_electronico">Correo electrónico</string>
     <string name="hint_correo_electronico">jane_doe@example.com</string>
     <string name="boton_continuar">Continuar</string>
 
-    // Descripcion del logo de la app
+    // Descripciones de imágenes
     <string name="logo_app">Logo de la aplicación</string>
-
-    // Descripcion de la imagen del nombre de la app
     <string name="imagen_nombre_app">Nombre de la aplicación</string>
-
     <string name="imagen_linea_separadora">imagen_linea_separadora</string>
 
     //Botones
@@ -24,9 +32,10 @@
 
     //Textos del final
     <string name="ya_tienes_una_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
-
     <string name="aceptas_terminos">Al continuar, aceptas nuestros</string>
     <string name="tex_terminos">Términos de servicio y</string>
     <string name="text_politicasPrivacidad">Politicas de privacidad</string>
+    <string name="boton_comenzar">Comenzar</string>
+
 
 </resources>
