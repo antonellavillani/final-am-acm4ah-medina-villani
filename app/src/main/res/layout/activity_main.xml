@@ -21,32 +21,28 @@
 
         <LinearLayout
             android:id="@+id/linearLayout_Header"
-            android:layout_width="match_parent"
+            android:layout_width="408dp"
             android:layout_height="46dp"
             android:background="@color/lima"
             android:orientation="horizontal"
-            android:visibility="visible"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-
-            >
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imagen_logo"
                 android:layout_width="72dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/medida100"
-                android:contentDescription="@string/logo_app"
-                android:src="@drawable/logo" />
+                android:layout_marginStart="100dp"
+                android:src="@drawable/logo"
+                android:contentDescription="@string/logo_app"/>
 
             <ImageView
                 android:id="@+id/imagen_name_app"
-                android:layout_width="@dimen/medida100"
+                android:layout_width="99dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/medida100"
-                android:contentDescription="@string/imagen_nombre_app"
-                android:src="@drawable/name_app" />
+                android:layout_marginEnd="100dp"
+                android:src="@drawable/name_app"
+                android:contentDescription="@string/imagen_nombre_app"/>
 
 
         </LinearLayout>
