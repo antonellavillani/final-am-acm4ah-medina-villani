@@ -40,37 +40,33 @@
 
         <LinearLayout
             android:id="@+id/LinearLayout_Boton_Comenzar"
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp">
 
             <TextView
                 android:id="@+id/textView_Encabezado"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/encabezado_primera_pantalla"
                 android:textColor="@color/verde_oscuro"
                 android:textSize="@dimen/fuenteTitulo"
-                app:layout_constraintTop_toBottomOf="@id/LinearLayout_AppIdentity"
-                app:layout_constraintStart_toStartOf="@id/LinearLayout_AppIdentity"
-                app:layout_constraintEnd_toEndOf="@id/LinearLayout_AppIdentity"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp" />
 
             <TextView
                 android:id="@+id/textView_TextoDescriptivo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/texto_descriptivo_primera_pantalla"
                 android:textSize="@dimen/fuenteParrafo"
                 android:textColor="@color/verde_oscuro"
-                app:layout_constraintTop_toBottomOf="@id/textView_Encabezado"
-                app:layout_constraintStart_toStartOf="@id/LinearLayout_AppIdentity"
-                app:layout_constraintEnd_toEndOf="@id/LinearLayout_AppIdentity"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp" />
 
             <Button
                 android:id="@+id/boton_comenzar"
@@ -80,10 +76,8 @@
                 android:textColor="@color/lima"
                 android:backgroundTint="@color/verde_oscuro"
                 android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@id/textView_TextoDescriptivo"
-                app:layout_constraintStart_toStartOf="@id/LinearLayout_AppIdentity"
-                app:layout_constraintEnd_toEndOf="@id/LinearLayout_AppIdentity"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/medida25"/>
 
         </LinearLayout>
 

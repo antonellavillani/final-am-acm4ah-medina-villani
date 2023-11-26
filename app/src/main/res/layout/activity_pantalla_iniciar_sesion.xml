@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="visible"
+            android:layout_marginTop="@dimen/medida75"
             app:layout_constraintTop_toTopOf="@id/linearLayout_Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -140,7 +141,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medida25"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/medida35"
                 android:backgroundTint="@color/lima"
                 android:text="@string/boton_continuar"
                 android:textColor="@color/verde_oscuro"/>
