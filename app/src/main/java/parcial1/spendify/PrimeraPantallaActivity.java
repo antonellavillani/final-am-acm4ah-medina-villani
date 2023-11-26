@@ -20,10 +20,10 @@ public class PrimeraPantallaActivity extends AppCompatActivity {
         botonComenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Crear una intención para iniciar la actividad MainActivity
-                Intent intent = new Intent(PrimeraPantallaActivity.this, MainActivity.class);
+                // Crear una intención para iniciar la actividad PantallaCrearCuenta
+                Intent intent = new Intent(PrimeraPantallaActivity.this, PantallaCrearCuenta.class);
 
-                // Iniciar la actividad MainActivity
+                // Iniciar la actividad PantallaCrearCuenta
                 startActivity(intent);
             }
         });

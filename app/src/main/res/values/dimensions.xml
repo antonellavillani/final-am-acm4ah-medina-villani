@@ -3,17 +3,21 @@
 
     //medidas que se repiten
     <dimen name="medida360">360dp</dimen>
+    <dimen name="medida120">120dp</dimen>
     <dimen name="medida100">100dp</dimen>
     <dimen name="medida85">85dp</dimen>
+    <dimen name="medida75">75dp</dimen>
     <dimen name="medida35">35dp</dimen>
     <dimen name="medida28">28dp</dimen>
     <dimen name="medida25">25dp</dimen>
     <dimen name="medida20">20dp</dimen>
+    <dimen name="medida10">10dp</dimen>
     <dimen name="medida7">7dp</dimen>
 
 
     //fuentes
     <dimen name="fuenteTitulo">24sp</dimen>
+    <dimen name="fuenteEncabezado">16sp</dimen>
     <dimen name="fuenteParrafo">14sp</dimen>
     <dimen name="fuente12">12sp</dimen>
     <dimen name="fuente10">10sp</dimen>

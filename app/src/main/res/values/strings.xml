@@ -5,7 +5,7 @@
 
     // Primera pantalla
 
-    // Títulos y textos
+    // Títulos y descripciones
     <string name="encabezado_primera_pantalla">Tu compañero financiero personal</string>
     <string name="texto_descriptivo_primera_pantalla">Toma el control de tus finanzas de manera sencilla y efectiva.</string>
 
@@ -31,11 +31,19 @@
     <string name="continuar_facebook">Continuar con Facebook</string>
 
     //Textos del final
-    <string name="ya_tienes_una_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
+    <string name="texto_ya_tienes_una_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
     <string name="aceptas_terminos">Al continuar, aceptas nuestros</string>
     <string name="tex_terminos">Términos de servicio y</string>
     <string name="text_politicasPrivacidad">Politicas de privacidad</string>
     <string name="boton_comenzar">Comenzar</string>
 
+    // ---------------------------------------------------------------------
+
+    // Pantalla Iniciar Sesion
+
+    // Títulos y descripciones
+    <string name="titulo_inicia_sesion">Inicia sesión</string>
+    <string name="EditText_contrasena">***********</string>
+    <string name="texto_contrasena">Contraseña</string>
 
 </resources>
