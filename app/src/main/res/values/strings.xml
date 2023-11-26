@@ -60,6 +60,7 @@
     <string name="boton_opcion2">$1,000 USD - $1,599 USD</string>
     <string name="boton_opcion3">$1,600 USD - $1,999 USD</string>
     <string name="boton_opcion4">Más de $2,000 USD</string>
+    <string name="boton_siguiente">Siguiente</string>
 
 
 </resources>

@@ -69,7 +69,7 @@
             android:fontFamily="@font/tt_interphases_extra_bold"
             android:text="@string/titulo_cuanto_ganas"
             android:textColor="@color/lima"
-            android:textSize="@dimen/fuenteTitulo" />
+            android:textSize="@dimen/fuenteTituloGrande" />
 
         <TextView
             android:id="@+id/titulo_al_mes"
@@ -80,49 +80,81 @@
             android:fontFamily="@font/tt_interphases_extra_bold"
             android:text="@string/titulo_al_mes"
             android:textColor="@color/verde_oscuro"
-            android:textSize="@dimen/fuenteTitulo"/>
+            android:textSize="@dimen/fuenteTituloGrande"/>
 
         <!-- Botones de opciones -->
-        <!-- Opción 1 -->
-        <Button
-            android:id="@+id/boton_opcion1"
-            style="@style/BotonPersonalizado"
-            android:layout_width="350dp"
+        <RadioGroup
+            android:id="@+id/radioGroupOpciones"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medida7"
-            android:layout_marginTop="8dp"
-            android:text="@string/boton_opcion1"
-            android:textColor="@color/verde_oscuro" />
-        <!-- Opción 2 -->
+            android:orientation="vertical">
+
+            <!-- Opción 1 -->
+            <RadioButton
+                android:id="@+id/radioButtonOpcion1"
+                android:layout_width="@dimen/medida360"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medida20"
+                android:layout_marginTop="@dimen/medida75"
+                android:text="@string/boton_opcion1"
+                android:textColor="@color/black"
+                android:buttonTint="@color/lima"
+                android:background="@drawable/selector_radiobutton"
+                android:padding="@dimen/medida7"
+                style="@style/RadioButtonStyle"/>
+
+            <!-- Opción 2 -->
+            <RadioButton
+                android:id="@+id/radioButtonOpcion2"
+                android:layout_width="@dimen/medida360"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medida20"
+                android:layout_marginTop="@dimen/medida28"
+                android:text="@string/boton_opcion2"
+                android:textColor="@color/black"
+                android:buttonTint="@color/lima"
+                android:background="@drawable/selector_radiobutton"
+                android:padding="@dimen/medida7"
+                style="@style/RadioButtonStyle"/>
+
+            <!-- Opción 3 -->
+            <RadioButton
+                android:id="@+id/radioButtonOpcion3"
+                android:layout_width="@dimen/medida360"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medida20"
+                android:layout_marginTop="@dimen/medida28"
+                android:text="@string/boton_opcion3"
+                android:textColor="@color/black"
+                android:buttonTint="@color/lima"
+                android:background="@drawable/selector_radiobutton"
+                android:padding="@dimen/medida7"
+                style="@style/RadioButtonStyle"/>
+
+            <!-- Opción 4 -->
+            <RadioButton
+                android:id="@+id/radioButtonOpcion4"
+                android:layout_width="@dimen/medida360"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medida20"
+                android:layout_marginTop="@dimen/medida28"
+                android:text="@string/boton_opcion4"
+                android:textColor="@color/black"
+                android:buttonTint="@color/lima"
+                android:background="@drawable/selector_radiobutton"
+                android:padding="@dimen/medida7"
+                style="@style/RadioButtonStyle"/>
+
+        </RadioGroup>
+
         <Button
-            android:id="@+id/boton_opcion2"
-            style="@style/BotonPersonalizado"
-            android:layout_width="350dp"
+            android:id="@+id/boton_siguiente"
+            android:layout_width="@dimen/medida360"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medida7"
-            android:layout_marginTop="8dp"
-            android:text="@string/boton_opcion2"
-            android:textColor="@color/verde_oscuro" />
-        <!-- Opción 3 -->
-        <Button
-            android:id="@+id/boton_opcion3"
-            style="@style/BotonPersonalizado"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medida7"
-            android:layout_marginTop="8dp"
-            android:text="@string/boton_opcion3"
-            android:textColor="@color/verde_oscuro" />
-        <!-- Opción 4 -->
-        <Button
-            android:id="@+id/boton_opcion4"
-            style="@style/BotonPersonalizado"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medida7"
-            android:layout_marginTop="8dp"
-            android:text="@string/boton_opcion4"
-            android:textColor="@color/verde_oscuro" />
+            android:layout_marginTop="@dimen/medida100"
+            android:backgroundTint="@color/lima"
+            android:text="@string/boton_siguiente"
+            android:textColor="@color/verde_oscuro"/>
 
     </LinearLayout>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    //medidas que se repiten
+    <!-- medidas que se repiten -->
     <dimen name="medida360">360dp</dimen>
     <dimen name="medida120">120dp</dimen>
     <dimen name="medida100">100dp</dimen>
@@ -16,14 +16,15 @@
     <dimen name="medida7">7dp</dimen>
 
 
-    //fuentes
+    <!-- fuentes -->
     <dimen name="fuenteTitulo">24sp</dimen>
+    <dimen name="fuenteTituloGrande">30sp</dimen>
     <dimen name="fuenteEncabezado">16sp</dimen>
     <dimen name="fuenteParrafo">14sp</dimen>
     <dimen name="fuente12">12sp</dimen>
     <dimen name="fuente10">10sp</dimen>
 
-    // estilo botones
+    <!-- estilo botones -->
     <dimen name="esquinas_redondeadas">8dp</dimen>
     <dimen name="contorno_boton">2dp</dimen>
 
