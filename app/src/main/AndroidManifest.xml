@@ -30,7 +30,7 @@
 
         <!-- ACTIVITY PANTALLA CREAR UNA CUENTA-->
         <activity
-            android:name=".MainActivity"
+            android:name=".PantallaCrearCuenta"
             android:exported="true">
         </activity>
 

@@ -2,6 +2,7 @@ package parcial1.spendify;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +11,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class PantallaCrearCuenta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pantalla_crear_cuenta);
 
         //Evento-> correo electrónico invalido. Salta un mensaje si no tiene @
         EditText editTextEmail = findViewById(R.id.texto_ingresar_correo);
@@ -27,17 +28,22 @@ public class MainActivity extends AppCompatActivity {
                 String email = editTextEmail.getText().toString().trim();
 
                 if (!email.contains("@")) {
-                    Toast.makeText(MainActivity.this, "Correo electrónico inválido, debe contener un @", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PantallaCrearCuenta.this, "Correo electrónico inválido, debe contener un @", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        //En tiempo de ejecución agregar sombra al titulo "Crear cuenta" (para probar)
+        //En tiempo de ejecución agrego una sombra al titulo "Crear cuenta" (para probar)
         TextView titulo = findViewById(R.id.titulo_crear_una_cuenta);
         titulo.setShadowLayer(15,5,5, Color.BLACK);
 
-
-
-
         }
+
+    // Evento -> link que lleva a la pantalla "Iniciar Sesion"
+    public void irAPantallaIniciarSesion(View view) {
+        Intent intent = new Intent(this, PantallaIniciarSesion.class);
+
+        // Iniciar la actividad PantallaIniciarSesion
+        startActivity(intent);
     }
+}

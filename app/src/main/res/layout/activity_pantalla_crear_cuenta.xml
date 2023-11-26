@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".PantallaCrearCuenta">
 
     <LinearLayout
         android:id="@+id/LinearLayout_parent"
@@ -182,12 +182,15 @@
                 android:id="@+id/text_ya_tienes_una_cuenta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medida100"
+                android:layout_marginStart="@dimen/medida75"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/tt_interphases_demi_bold"
-                android:text="@string/ya_tienes_una_cuenta"
+                android:text="@string/texto_ya_tienes_una_cuenta"
                 android:textColor="@color/white"
-                android:textSize="@dimen/fuente12" />
+                android:textSize="@dimen/fuenteEncabezado"
+                android:onClick="irAPantallaIniciarSesion"
+                android:textColorLink="@color/link_color"
+                android:autoLink="web"/>
 
 
             <TextView
@@ -196,9 +199,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/aceptas_terminos"
                 android:layout_marginTop="@dimen/medida100"
-                android:layout_marginStart="140dp"
+                android:layout_marginStart="@dimen/medida120"
                 android:textColor="@color/white"
-                android:textSize="9sp"
+                android:textSize="@dimen/fuente12"
                 />
 
 
