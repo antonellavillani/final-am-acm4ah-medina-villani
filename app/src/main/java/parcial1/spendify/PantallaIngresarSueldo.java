@@ -27,18 +27,8 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
         radioGroupOpciones.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // Desmarcar todos los botones
-                for (int i = 0; i < group.getChildCount(); i++) {
-                    RadioButton radioButton = (RadioButton) group.getChildAt(i);
-                    radioButton.setChecked(false);
-                }
-
-                // Marcar el botón seleccionado
-                RadioButton selectedRadioButton = findViewById(checkedId);
-                selectedRadioButton.setChecked(true);
-
-                // Habilitar el botón "Siguiente"
-                botonSiguiente.setEnabled(true);
+                // Habilitar el botón "Siguiente" si se selecciona alguna opción
+                botonSiguiente.setEnabled(checkedId != -1);
             }
         });
 
@@ -49,8 +39,9 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
                 // Mostrar Toast si no se ha seleccionado ninguna opción
                 Toast.makeText(PantallaIngresarSueldo.this, "Selecciona una opción", Toast.LENGTH_SHORT).show();
             } else {
-                // Guardar la opción seleccionada para usar después
-                int opcionSeleccionada = radioGroupOpciones.getCheckedRadioButtonId();
+                // Obtener la opción seleccionada
+                RadioButton selectedRadioButton = findViewById(radioGroupOpciones.getCheckedRadioButtonId());
+                String opcionSeleccionada = selectedRadioButton.getText().toString();
             }
         });
     }
