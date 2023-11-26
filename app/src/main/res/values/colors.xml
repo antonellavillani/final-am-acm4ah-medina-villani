@@ -5,6 +5,7 @@
     // Colores claros
     <color name="white">#FFFFFFFF</color>
     <color name="lima">#EDFFCC</color>
+    <color name="link_color">#0000FF</color>
 
     // Colores oscuros
     <color name="black">#FF000000</color>
