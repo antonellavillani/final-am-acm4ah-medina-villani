@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Botones de opciones en Pantalla Ingresar Sueldo -->
+    <style name="BotonPersonalizado" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/boton_personalizado</item>
+        <item name="android:textColor">@color/verde_oscuro</item>
+    </style>
+
+</resources>

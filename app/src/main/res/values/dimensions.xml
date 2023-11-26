@@ -7,6 +7,7 @@
     <dimen name="medida100">100dp</dimen>
     <dimen name="medida85">85dp</dimen>
     <dimen name="medida75">75dp</dimen>
+    <dimen name="medida50">50dp</dimen>
     <dimen name="medida35">35dp</dimen>
     <dimen name="medida28">28dp</dimen>
     <dimen name="medida25">25dp</dimen>
@@ -22,5 +23,8 @@
     <dimen name="fuente12">12sp</dimen>
     <dimen name="fuente10">10sp</dimen>
 
-    
+    // estilo botones
+    <dimen name="esquinas_redondeadas">8dp</dimen>
+    <dimen name="contorno_boton">2dp</dimen>
+
 </resources>
