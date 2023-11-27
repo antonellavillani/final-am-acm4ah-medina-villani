@@ -13,9 +13,11 @@
         android:theme="@style/Theme.Spendify"
         tools:targetApi="31">
         <activity
-            android:name=".PantallaIngresarSueldo"
+            android:name=".PantallaGastosFijos"
             android:exported="false" />
-        <!-- ACTIVITY PANTALLA INICIAR SESION -->
+        <activity
+            android:name=".PantallaIngresarSueldo"
+            android:exported="false" /> <!-- ACTIVITY PANTALLA INICIAR SESION -->
         <activity
             android:name=".PantallaIniciarSesion"
             android:exported="false" /> <!-- ACTIVITY PRIMERA PANTALLA -->
@@ -30,7 +32,7 @@
         </activity> <!-- ACTIVITY PANTALLA CREAR UNA CUENTA -->
         <activity
             android:name=".PantallaCrearCuenta"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

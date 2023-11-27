@@ -1,66 +1,89 @@
 <resources>
 
-    // Name app
+    <!-- Name App -->
     <string name="app_name">Spendify</string>
 
-    // Primera pantalla
+    <!-- Primera pantalla -->
 
-    // Títulos y descripciones
+    <!-- Títulos y descripciones -->
     <string name="encabezado_primera_pantalla">Tu compañero financiero personal</string>
     <string name="texto_descriptivo_primera_pantalla">Toma el control de tus finanzas de manera sencilla y efectiva.</string>
 
-    // Descripción de imágenes
+    <!-- Descripción de imágenes -->
     <string name="app_identity">Logo de la aplicación Spendify y eslogan</string>
 
-    // ---------------------------------------------------------------------
+    <!-- ==================================================================================================================================================== -->
 
-    // Pantalla MainActivity "Crea una cuenta"
+    <!-- Pantalla MainActivity "Crea una cuenta" -->
     <string name="titulo_crear_una_cuenta">Crea una cuenta</string>
     <string name="texto_crear_cuenta">Descubre cómo tomar el control de tu dinero con\nnuestras guías detalladas y herramientas\npersonalizadas.</string>
     <string name="texto_correo_electronico">Correo electrónico</string>
     <string name="hint_correo_electronico">jane_doe@example.com</string>
     <string name="boton_continuar">Continuar</string>
 
-    // Descripciones de imágenes
+    <!-- Descripciones de imágenes -->
     <string name="logo_app">Logo de la aplicación</string>
     <string name="imagen_nombre_app">Nombre de la aplicación</string>
     <string name="imagen_linea_separadora">imagen_linea_separadora</string>
 
-    //Botones
+    <!-- Botones -->
     <string name="continuar_google">Continuar con google</string>
     <string name="continuar_facebook">Continuar con Facebook</string>
 
-    //Textos del final
+    <!-- Textos del final -->
     <string name="texto_ya_tienes_una_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
     <string name="aceptas_terminos">Al continuar, aceptas nuestros</string>
     <string name="tex_terminos">Términos de servicio y</string>
     <string name="text_politicasPrivacidad">Politicas de privacidad</string>
     <string name="boton_comenzar">Comenzar</string>
 
-    // ---------------------------------------------------------------------
+    <!-- ==================================================================================================================================================== -->
 
-    // Pantalla Iniciar Sesion
+    <!-- Pantalla Iniciar Sesion -->
 
-    // Títulos y descripciones
+    <!-- Títulos y descripciones -->
     <string name="titulo_inicia_sesion">Inicia sesión</string>
     <string name="EditText_contrasena">***********</string>
     <string name="texto_contrasena">Contraseña</string>
 
 
-    // ---------------------------------------------------------------------
+    <!-- ==================================================================================================================================================== -->
 
-    // Pantalla Ingresar Sueldo
+    <!-- Pantalla Ingresar Sueldo -->
 
-    // Titulos
+    <!-- Titulo -->
     <string name="titulo_al_mes">al mes?</string>
     <string name="titulo_cuanto_ganas">¿Cuánto ganas</string>
 
-    // Textos botones
+    <!-- Textos botones -->
     <string name="boton_opcion1">Menos de $1.000 USD</string>
     <string name="boton_opcion2">$1,000 USD - $1,599 USD</string>
     <string name="boton_opcion3">$1,600 USD - $1,999 USD</string>
     <string name="boton_opcion4">Más de $2,000 USD</string>
     <string name="boton_siguiente">Siguiente</string>
 
+
+    <!-- ==================================================================================================================================================== -->
+
+    <!-- Pantalla Ingresar Gastos Mensuales Fijos -->
+
+    <!-- Titulo -->
+    <string name="titulo_tienes_gastos">¿Tienes gastos</string>
+    <string name="titulo_fijos_mensuales">fijos mensuales?</string>
+
+    <!-- TextViews y EditTexts -->
+    <string name="texto_tipo_de_gasto">Tipo de gasto</string>
+    <string name="EditText_alquiler_seguro_gasolina">Alquiler, Seguro, Gasolina, …</string>
+    <string name="texto_monto">Monto</string>
+    <string name="EditText_monto">$00.000,00</string>
+
+    <!-- Botones -->
+    <string name="button_agregar">Agregar</string>
+
+    <!-- TableLayout -->
+    <string name="tipo_de_gasto">Tipo de Gasto</string>
+    <string name="monto">Monto</string>
+    <string name="modificar">Modificar</string>
+    <string name="eliminar">Eliminar</string>
 
 </resources>

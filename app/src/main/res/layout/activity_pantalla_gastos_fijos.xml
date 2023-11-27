@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaGastosFijos">
+
+    <!-- LinearLayout que cubre toda la pantalla -->
+    <LinearLayout
+        android:id="@+id/LinearLayout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green_background"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <!-- LinearLayout para el header -->
+        <LinearLayout
+            android:id="@+id/linearLayout_Header"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/lima"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imagen_logo"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:contentDescription="@string/logo_app"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/imagen_name_app"
+                android:layout_width="99dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:contentDescription="@string/imagen_nombre_app"
+                android:src="@drawable/name_app" />
+
+        </LinearLayout>
+
+        <!-- LinearLayput para Titulo, Inputs y ScrollView-->
+        <LinearLayout
+            android:id="@+id/linearLayout_Titulo_Inputs_ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout_Header"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/titulo_tienes_gastos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medida50"
+                android:fontFamily="@font/tt_interphases_extra_bold"
+                android:text="@string/titulo_tienes_gastos"
+                android:textColor="@color/lima"
+                android:textSize="@dimen/fuenteTituloGrande" />
+
+            <TextView
+                android:id="@+id/titulo_fijos_mensuales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medida7"
+                android:fontFamily="@font/tt_interphases_extra_bold"
+                android:text="@string/titulo_fijos_mensuales"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="@dimen/fuenteTituloGrande"/>
+
+
+        <!-- Ingreso de datos -->
+        <TextView
+            android:id="@+id/texto_tipo_de_gasto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/medida140"
+            android:layout_marginTop="@dimen/medida35"
+            android:fontFamily="@font/tt_interphases_demi_bold"
+            android:text="@string/texto_tipo_de_gasto"
+            android:textColor="@color/lima"
+            android:textSize="@dimen/fuente12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_fijos_mensuales" />
+
+        <EditText
+            android:id="@+id/EditText_ingresar_tipo_de_gasto"
+            android:layout_width="@dimen/medida360"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida7"
+            android:autofillHints="yes"
+            android:background="@drawable/edit_text_border"
+            android:ems="17"
+            android:fontFamily="@font/TT_Interphases_Light"
+            android:hint="@string/EditText_alquiler_seguro_gasolina"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/lima"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/texto_tipo_de_gasto" />
+
+        <TextView
+            android:id="@+id/texto_monto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/medida155"
+            android:layout_marginTop="@dimen/medida35"
+            android:fontFamily="@font/tt_interphases_demi_bold"
+            android:text="@string/texto_monto"
+            android:textColor="@color/lima"
+            android:textSize="@dimen/fuente12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditText_ingresar_tipo_de_gasto" />
+
+        <EditText
+            android:id="@+id/EditText_ingresar_monto"
+            android:layout_width="@dimen/medida360"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida7"
+            android:autofillHints="yes"
+            android:background="@drawable/edit_text_border"
+            android:ems="17"
+            android:fontFamily="@font/TT_Interphases_Light"
+            android:hint="@string/EditText_monto"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/lima"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/texto_monto" />
+
+        <!-- Botón "Agregar" -->
+        <Button
+            android:id="@+id/boton_agregar"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida35"
+            android:backgroundTint="@color/lima"
+            android:text="@string/button_agregar"
+            android:textColor="@color/verde_oscuro"/>
+
+            <!-- ScrollView y TableLayout para mostrar gastos agregados -->
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                app:layout_constraintTop_toBottomOf="@id/boton_agregar">
+
+                <!-- TableLayout para mostrar gastos agregados -->
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medida25"
+                    android:stretchColumns="*"
+                    android:background="@drawable/table_background"
+                    android:visibility="gone"> <!-- Por defecto, la tabla estará oculta -->
+
+                    <!-- Encabezado de la tabla -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lima">
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/tipo_de_gasto" />
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/monto" />
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/modificar" />
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/eliminar" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </ScrollView>
+
+    <!-- LinearLayout para botón "Continuar" -->
+    <LinearLayout
+        android:id="@+id/LinearLayout_Boton_Continuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/linearLayout_Titulo_Inputs_ScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/linea_separadora"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginStart="@dimen/medida35"
+            android:layout_marginTop="@dimen/medida35"
+            android:layout_marginEnd="@dimen/medida35"
+            android:contentDescription="@string/imagen_linea_separadora"
+            android:src="@drawable/linea_separadora" />
+
+        <Button
+            android:id="@+id/boton_continuar_pantalla_ingresar_gastos_fijos"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida35"
+            android:backgroundTint="@color/lima"
+            android:text="@string/boton_continuar"
+            android:textColor="@color/verde_oscuro"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

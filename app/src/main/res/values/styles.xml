@@ -3,4 +3,12 @@
     <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:button">@null</item>
     </style>
+    <!-- Estilo para la tabla de Pantalla Gastos Fijos -->
+    <style name="TableHeader">
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/lima</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/fuente12</item>
+        <item name="android:background">@color/lima</item>
+    </style>
 </resources>
