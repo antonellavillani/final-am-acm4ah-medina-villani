@@ -33,6 +33,26 @@ public class PantallaIndex extends AppCompatActivity {
                 abrirPantallaVerResumenMensual();
             }
         });
+
+        // Botón 'Ver Consejos'
+        Button botonConsejos = findViewById(R.id.boton_consejos);
+        botonConsejos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirPantallaVerConsejos();
+            }
+        });
+
+        // Botón 'Configuración'
+        Button botonConfiguracion = findViewById(R.id.boton_configuracion);
+        botonConfiguracion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirPantallaVerConfiguracion();
+            }
+        });
+
+
     }
 
      // ------------ Funciones para abrir pantallas ------------
@@ -49,4 +69,15 @@ public class PantallaIndex extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // PantallaVerConsejos
+    private void abrirPantallaVerConsejos() {
+        Intent intent = new Intent(this, PantallaVerConsejos.class);
+        startActivity(intent);
+    }
+
+    // PantallaVerConfiguracion
+    private void abrirPantallaVerConfiguracion() {
+        Intent intent = new Intent(this, PantallaVerConfiguracion.class);
+        startActivity(intent);
+    }
 }

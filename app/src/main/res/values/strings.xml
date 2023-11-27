@@ -143,4 +143,20 @@
     <string name="imagen_pantalla_ver_consejos">Imagen de pantalla Ver Consejos</string>
 
 
+    <!-- ==================================================================================================================================================== -->
+
+    <!-- Pantalla Ver Configuración -->
+
+    <!-- Titulo y textos -->
+    <string name="titulo_configuracion">Configuracion</string>
+
+    <!-- Descripción de imágenes -->
+    <string name="imagen_pantalla_configuracion">Imagen pantalla configuracion</string>
+
+    <!-- Botones -->
+    <string name="boton_modificar_contrasena">Modificar contraseña</string>
+    <string name="boton_modificar_ingreso_mensual">Modificar ingreso mensual</string>
+    <string name="boton_eliminar_cuenta">Eliminar cuenta</string>
+
+
 </resources>
