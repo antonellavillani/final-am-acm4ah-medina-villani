@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medida28"
-                android:layout_marginTop="@dimen/medida35"
+                android:layout_marginTop="@dimen/medida20"
                 android:fontFamily="@font/tt_interphases_demi_bold"
                 android:text="@string/texto_correo_electronico"
                 android:textColor="@color/lima"
@@ -115,16 +115,47 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/texto_correo_electronico" />
 
+            <TextView
+                android:id="@+id/texto_nueva_contrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medida28"
+                android:layout_marginTop="@dimen/medida7"
+                android:fontFamily="@font/tt_interphases_demi_bold"
+                android:text="@string/texto_contrasena"
+                android:textColor="@color/lima"
+                android:textSize="@dimen/fuente12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/texto_ingresar_correo" />
+
+            <EditText
+                android:id="@+id/EditText_ingresar_nueva_contrasena"
+                android:layout_width="@dimen/medida360"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/medida7"
+                android:autofillHints="yes"
+                android:background="@drawable/edit_text_border"
+                android:ems="17"
+                android:fontFamily="@font/TT_Interphases_Light"
+                android:hint="@string/EditText_contrasena"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/lima"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texto_nueva_contrasena" />
+
             <Button
-                android:id="@+id/boton_continuar"
+                android:id="@+id/boton_registrar"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medida25"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/lima"
-                android:text="@string/boton_continuar"
+                android:text="@string/boton_registrar"
                 android:textColor="@color/verde_oscuro"/>
-
 
         </LinearLayout>
 
@@ -143,7 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
                 android:layout_marginStart="@dimen/medida35"
-                android:layout_marginTop="@dimen/medida35"
+                android:layout_marginTop="@dimen/medida20"
                 android:layout_marginEnd="@dimen/medida35"
                 android:contentDescription="@string/imagen_linea_separadora"
                 android:src="@drawable/linea_separadora" />
@@ -169,7 +200,7 @@
                 android:layout_width="@dimen/medida360"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medida20"
-                android:layout_marginTop="@dimen/medida25"
+                android:layout_marginTop="@dimen/medida7"
                 android:backgroundTint="@color/verde_oscuro"
                 android:text="@string/continuar_facebook"
                 android:textColor="@color/lima"
@@ -183,7 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medida75"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/medida20"
                 android:fontFamily="@font/tt_interphases_demi_bold"
                 android:text="@string/texto_ya_tienes_una_cuenta"
                 android:textColor="@color/white"
@@ -198,7 +229,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aceptas_terminos"
-                android:layout_marginTop="@dimen/medida100"
+                android:layout_marginTop="@dimen/medida75"
                 android:layout_marginStart="@dimen/medida120"
                 android:textColor="@color/white"
                 android:textSize="@dimen/fuente12"

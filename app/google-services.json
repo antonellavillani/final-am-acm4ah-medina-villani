@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "391670180482",
+    "project_id": "spendify-save-smart",
+    "storage_bucket": "spendify-save-smart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391670180482:android:3b1c0677f53a76265c229b",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbrdBUSaL5z8ly3LT33_ORgjIxc31j7ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

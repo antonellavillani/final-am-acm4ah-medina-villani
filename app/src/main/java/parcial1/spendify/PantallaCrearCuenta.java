@@ -10,36 +10,72 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PantallaCrearCuenta extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_crear_cuenta);
 
-        //Evento-> correo electrónico invalido. Salta un mensaje si no tiene @
-        EditText editTextEmail = findViewById(R.id.texto_ingresar_correo);
-        Button buttonContinue = findViewById(R.id.boton_continuar);
+        // Inicialización de Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
-        buttonContinue.setOnClickListener(new View.OnClickListener() {
+        // Enlace a elementos de la interfaz de usuario
+        EditText editTextEmail = findViewById(R.id.texto_ingresar_correo);
+        EditText editTextPassword = findViewById(R.id.EditText_ingresar_nueva_contrasena);
+        Button buttonRegister = findViewById(R.id.boton_registrar);
+
+        // Evento al hacer clic en el botón de registro
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = editTextEmail.getText().toString().trim();
+                String password = editTextPassword.getText().toString().trim();
 
+                // Validar que el correo electrónico sea válido
                 if (!email.contains("@")) {
                     Toast.makeText(PantallaCrearCuenta.this, "Correo electrónico inválido, debe contener un @", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Registrar al usuario
+                    registrarUsuario(email, password);
                 }
             }
         });
 
-        //En tiempo de ejecución agrego una sombra al titulo "Crear cuenta" (para probar)
+        // Estilo de tiempo de ejecución: agrego una sombra al título "Crear cuenta"
         TextView titulo = findViewById(R.id.titulo_crear_una_cuenta);
-        titulo.setShadowLayer(15,5,5, Color.BLACK);
+        titulo.setShadowLayer(15, 5, 5, Color.BLACK);
+    }
 
-        }
+    // Función para registrar al usuario
+    private void registrarUsuario(String email, String password) {
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(PantallaCrearCuenta.this, task -> {
+                    if (task.isSuccessful()) {
+                        // Registro exitoso, el usuario es dirigido a PantallaIngresarSueldo
+                        Toast.makeText(PantallaCrearCuenta.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                        // Redirigir al usuario a PantallaIngresarSueldo
+                        irAPantallaIngresarSueldo();
+                    } else {
+                        // Si el registro falla, muestra un mensaje al usuario.
+                        Toast.makeText(PantallaCrearCuenta.this, "Error al registrar el usuario", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
 
-    // Evento -> link que lleva a la pantalla "Iniciar Sesion"
+    // Función para redirigir a PantallaIngresarSueldo
+    private void irAPantallaIngresarSueldo() {
+        Intent intent = new Intent(this, PantallaIngresarSueldo.class);
+        startActivity(intent);
+        // Asegúrate de cerrar esta actividad si no deseas que el usuario pueda volver a ella con el botón "Atrás"
+        finish();
+    }
+
+    // Evento -> link que lleva a la pantalla "Iniciar Sesión"
     public void irAPantallaIniciarSesion(View view) {
         Intent intent = new Intent(this, PantallaIniciarSesion.class);
 
