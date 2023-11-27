@@ -117,5 +117,17 @@
     <string name="boton_eliminar_gasto">Eliminar gasto</string>
     <string name="boton_volver">Volver</string>
 
+    <!-- ==================================================================================================================================================== -->
+
+    <!-- Pantalla Ver Resumen Mensual -->
+
+    <!-- Titulo y textos -->
+    <string name="titulo_resumen_mensual">Resumen mensual</string>
+    <string name="TextView_total_de_gastos_mensuales">Total de gastos mensuales</string>
+    <string name="texto_distribucion_de_gastos">Distribución de gastos</string>
+
+    <!-- Descripción de imágenes -->
+    <string name="imagen_de_pantalla_ver_resumen_mensual">Imagen de pantalla Ver Resumen Mensual</string>
+
 
 </resources>

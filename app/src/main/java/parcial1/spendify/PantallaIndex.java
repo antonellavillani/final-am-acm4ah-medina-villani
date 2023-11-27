@@ -25,14 +25,28 @@ public class PantallaIndex extends AppCompatActivity {
             }
         });
 
-
+        // Botón 'Ver Resumen Mensual'
+        Button botonVerResumenMensual = findViewById(R.id.boton_ver_resumen_mensual);
+        botonVerResumenMensual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirPantallaVerResumenMensual();
+            }
+        });
     }
 
-        // ------------ Funciones para abrir pantallas ------------
+     // ------------ Funciones para abrir pantallas ------------
 
-        // PantallaVerGastos
-        private void abrirPantallaVerGastos() {
-            Intent intent = new Intent(this, PantallaVerGastos.class);
-            startActivity(intent);
-        }
+    // PantallaVerGastos
+    private void abrirPantallaVerGastos() {
+        Intent intent = new Intent(this, PantallaVerGastos.class);
+        startActivity(intent);
+    }
+
+    // PantallaVerResumenMensual
+    private void abrirPantallaVerResumenMensual() {
+        Intent intent = new Intent(this, PantallaVerResumenMensual.class);
+        startActivity(intent);
+    }
+
 }

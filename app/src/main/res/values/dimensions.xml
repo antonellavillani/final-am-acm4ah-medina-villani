@@ -7,6 +7,7 @@
     <dimen name="medida140">140dp</dimen>
     <dimen name="medida120">120dp</dimen>
     <dimen name="medida100">100dp</dimen>
+    <dimen name="medida95">95dp</dimen>
     <dimen name="medida85">85dp</dimen>
     <dimen name="medida75">75dp</dimen>
     <dimen name="medida50">50dp</dimen>
