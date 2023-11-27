@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Spendify"
         tools:targetApi="31">
         <activity
+            android:name=".PantallaVerGastos"
+            android:exported="false" />
+        <activity
             android:name=".PantallaIndex"
             android:exported="false" />
         <activity
