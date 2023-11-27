@@ -60,7 +60,7 @@
 
             <ImageView
                 android:id="@+id/imagen_ver_gastos"
-                android:layout_width="72dp"
+                android:layout_width="@dimen/medida100"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/imagen_pantalla_ver_gastos"
                 android:src="@drawable/img_pantalla_ver_gastos" />
