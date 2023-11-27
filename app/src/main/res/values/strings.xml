@@ -130,4 +130,16 @@
     <string name="imagen_de_pantalla_ver_resumen_mensual">Imagen de pantalla Ver Resumen Mensual</string>
 
 
+    <!-- ==================================================================================================================================================== -->
+
+    <!-- Pantalla Ver Consejos -->
+
+    <!-- Titulo y textos -->
+    <string name="titulo_consejos_sobre">Consejos sobre</string>
+    <string name="titulo_gastos_y_ahorros">Gastos y Ahorros</string>
+
+    <!-- Descripción de imágenes -->
+    <string name="imagen_pantalla_ver_consejos">Imagen de pantalla Ver Consejos</string>
+
+
 </resources>
