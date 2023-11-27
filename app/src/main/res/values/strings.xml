@@ -86,4 +86,19 @@
     <string name="modificar">Modificar</string>
     <string name="eliminar">Eliminar</string>
 
+    <!-- ==================================================================================================================================================== -->
+
+    <!-- Pantalla Index -->
+
+    <!-- Titulo -->
+    <string name="titulo_bienvenido">¡Bienvenido/a!</string>
+
+    <!-- Botones -->
+    <string name="boton_gastos">Gastos</string>
+    <string name="boton_ver_resumen_mensual">Ver resumen mensual</string>
+    <string name="boton_consejos">Consejos sobre Gastos y Ahorros</string>
+    <string name="boton_configuracion">Configuracion</string>
+    <string name="boton_cerrar_sesion">Cerrar sesión</string>
+
+
 </resources>
