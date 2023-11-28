@@ -80,6 +80,7 @@
 
     <!-- Botones -->
     <string name="button_agregar">Agregar</string>
+    <string name="button_continuar">Continuar</string>
 
     <!-- TableLayout -->
     <string name="tipo_de_gasto">Tipo de Gasto</string>

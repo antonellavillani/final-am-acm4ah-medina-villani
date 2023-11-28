@@ -230,7 +230,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medida35"
             android:backgroundTint="@color/lima"
-            android:text="@string/boton_continuar"
+            android:text="@string/button_continuar"
             android:textColor="@color/verde_oscuro"/>
 
     </LinearLayout>
