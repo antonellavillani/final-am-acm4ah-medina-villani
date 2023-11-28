@@ -10,27 +10,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class PantallaCrearCuenta extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
-    private FirebaseFirestore db;
+    private FirebaseManager firebaseManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_crear_cuenta);
 
-        // Inicializar Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
-
-        // Inicializar Firestore
-        db = FirebaseFirestore.getInstance();
-
-        // Inicialización de Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        // Inicializar FirebaseManager
+        firebaseManager = FirebaseManager.getInstance();
 
         // Enlace a elementos de la interfaz de usuario
         EditText editTextEmail = findViewById(R.id.texto_ingresar_correo);
@@ -61,18 +52,21 @@ public class PantallaCrearCuenta extends AppCompatActivity {
 
     // Función para registrar al usuario
     private void registrarUsuario(String email, String password) {
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(PantallaCrearCuenta.this, task -> {
-                    if (task.isSuccessful()) {
-                        // Registro exitoso, el usuario es dirigido a PantallaIngresarSueldo
-                        Toast.makeText(PantallaCrearCuenta.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                        // Redirigir al usuario a PantallaIngresarSueldo
-                        irAPantallaIngresarSueldo();
-                    } else {
-                        // Si el registro falla, muestra un mensaje al usuario.
-                        Toast.makeText(PantallaCrearCuenta.this, "Error al registrar el usuario", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        firebaseManager.registrarUsuario(email, password, new FirebaseManager.AuthCallback() {
+            @Override
+            public void onSuccess() {
+                // Registro exitoso, el usuario es dirigido a PantallaIngresarSueldo
+                Toast.makeText(PantallaCrearCuenta.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                // Redirigir al usuario a PantallaIngresarSueldo
+                irAPantallaIngresarSueldo();
+            }
+
+            @Override
+            public void onFailure(String errorMessage) {
+                // Si el registro falla, muestra un mensaje al usuario.
+                Toast.makeText(PantallaCrearCuenta.this, "Error al registrar el usuario: " + errorMessage, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     // Función para redirigir a PantallaIngresarSueldo
