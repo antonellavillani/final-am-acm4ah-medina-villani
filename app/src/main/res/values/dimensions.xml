@@ -3,6 +3,7 @@
 
     <!-- medidas que se repiten -->
     <dimen name="medida360">360dp</dimen>
+    <dimen name="medida250">250dp</dimen>
     <dimen name="medida155">155dp</dimen>
     <dimen name="medida140">140dp</dimen>
     <dimen name="medida120">120dp</dimen>

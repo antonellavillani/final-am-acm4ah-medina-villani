@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/medida7"
-            android:layout_marginTop="@dimen/medida50"
+            android:layout_marginTop="@dimen/medida95"
             android:fontFamily="@font/tt_interphases_extra_bold"
             android:text="@string/titulo_cuanto_ganas"
             android:textColor="@color/lima"
@@ -82,76 +82,42 @@
             android:textColor="@color/verde_oscuro"
             android:textSize="@dimen/fuenteTituloGrande"/>
 
-        <!-- Botones de opciones -->
-        <RadioGroup
-            android:id="@+id/radioGroupOpciones"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/texto_sueldo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginEnd="@dimen/medida35"
+            android:layout_marginTop="@dimen/medida100"
+            android:fontFamily="@font/tt_interphases_demi_bold"
+            android:text="@string/texto_sueldo"
+            android:textColor="@color/lima"
+            android:textSize="@dimen/fuente12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditText_ingresar_tipo_de_gasto" />
 
-            <!-- Opción 1 -->
-            <RadioButton
-                android:id="@+id/radioButtonOpcion1"
-                android:layout_width="@dimen/medida360"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medida20"
-                android:layout_marginTop="@dimen/medida75"
-                android:text="@string/boton_opcion1"
-                android:textColor="@color/black"
-                android:buttonTint="@color/lima"
-                android:background="@drawable/selector_radiobutton"
-                android:padding="@dimen/medida7"
-                style="@style/RadioButtonStyle"/>
-
-            <!-- Opción 2 -->
-            <RadioButton
-                android:id="@+id/radioButtonOpcion2"
-                android:layout_width="@dimen/medida360"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medida20"
-                android:layout_marginTop="@dimen/medida28"
-                android:text="@string/boton_opcion2"
-                android:textColor="@color/black"
-                android:buttonTint="@color/lima"
-                android:background="@drawable/selector_radiobutton"
-                android:padding="@dimen/medida7"
-                style="@style/RadioButtonStyle"/>
-
-            <!-- Opción 3 -->
-            <RadioButton
-                android:id="@+id/radioButtonOpcion3"
-                android:layout_width="@dimen/medida360"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medida20"
-                android:layout_marginTop="@dimen/medida28"
-                android:text="@string/boton_opcion3"
-                android:textColor="@color/black"
-                android:buttonTint="@color/lima"
-                android:background="@drawable/selector_radiobutton"
-                android:padding="@dimen/medida7"
-                style="@style/RadioButtonStyle"/>
-
-            <!-- Opción 4 -->
-            <RadioButton
-                android:id="@+id/radioButtonOpcion4"
-                android:layout_width="@dimen/medida360"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medida20"
-                android:layout_marginTop="@dimen/medida28"
-                android:text="@string/boton_opcion4"
-                android:textColor="@color/black"
-                android:buttonTint="@color/lima"
-                android:background="@drawable/selector_radiobutton"
-                android:padding="@dimen/medida7"
-                style="@style/RadioButtonStyle"/>
-
-        </RadioGroup>
+        <EditText
+            android:id="@+id/EditText_ingresar_sueldo"
+            android:layout_width="@dimen/medida360"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida7"
+            android:autofillHints="yes"
+            android:background="@drawable/edit_text_border"
+            android:ems="17"
+            android:fontFamily="@font/TT_Interphases_Light"
+            android:hint="@string/EditText_monto"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/lima"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/texto_sueldo" />
 
         <Button
             android:id="@+id/boton_siguiente"
             android:layout_width="@dimen/medida360"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medida100"
+            android:layout_marginTop="@dimen/medida250"
             android:backgroundTint="@color/lima"
             android:text="@string/boton_siguiente"
             android:textColor="@color/verde_oscuro"/>

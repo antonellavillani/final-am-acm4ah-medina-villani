@@ -54,6 +54,7 @@
     <!-- Titulo -->
     <string name="titulo_al_mes">al mes?</string>
     <string name="titulo_cuanto_ganas">¿Cuánto ganas</string>
+    <string name="texto_sueldo">Sueldo en USD (podrás modificarlo más adelante)</string>
 
     <!-- Textos botones -->
     <string name="boton_opcion1">Menos de $1.000 USD</string>
