@@ -8,24 +8,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class PantallaIngresarSueldo extends AppCompatActivity {
 
     private Button botonSiguiente;
     private EditText editTextSueldo;
+    private FirebaseManager firebaseManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_ingresar_sueldo);
+
+        firebaseManager = FirebaseManager.getInstance();
 
         editTextSueldo = findViewById(R.id.EditText_ingresar_sueldo);
         botonSiguiente = findViewById(R.id.boton_siguiente);
@@ -37,12 +38,12 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
         editTextSueldo.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int before, int count) {
-                // No se necesita implementar antes del cambio de texto
+                // No se necesita implementar
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                // No se necesita implementar durante el cambio de texto
+                // No se necesita implementar
             }
 
             @Override
@@ -62,9 +63,8 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
                 // Obtener el sueldo ingresado por el usuario
                 double sueldo = Double.parseDouble(editTextSueldo.getText().toString());
 
-                // Obtener el usuario actualmente autenticado
-                FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                FirebaseUser currentUser = mAuth.getCurrentUser();
+                // Obtener el usuario actualmente autenticado utilizando FirebaseManager
+                FirebaseUser currentUser = FirebaseManager.getInstance().getCurrentUser();
 
                 // Verificar si el usuario está autenticado
                 if (currentUser != null) {
@@ -72,20 +72,17 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
                     String userEmail = currentUser.getEmail();
 
                     // Guardar el sueldo en Firestore con el correo electrónico como userId
-                    FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-                    // Crear un mapa con los datos a guardar
                     Map<String, Object> usuario = new HashMap<>();
                     usuario.put("sueldo", sueldo);
 
                     // Agregar el documento a la colección "usuarios" con el correo electrónico como ID
-                    db.collection("usuarios").document(userEmail).set(usuario);
+                    firebaseManager.getFirestoreInstance().collection("usuarios").document(userEmail).set(usuario);
 
                     // Ir a PantallaIngresarGastosFijos
                     Intent intent = new Intent(PantallaIngresarSueldo.this, PantallaGastosFijos.class);
                     startActivity(intent);
                 } else {
-                    // El usuario no está autenticado, manejar según sea necesario
+                    // El usuario no está autenticado
                     Toast.makeText(PantallaIngresarSueldo.this, "Error: Usuario no autenticado", Toast.LENGTH_SHORT).show();
                 }
             }

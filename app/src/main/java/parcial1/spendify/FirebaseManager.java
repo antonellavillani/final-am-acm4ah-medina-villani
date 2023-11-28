@@ -41,6 +41,10 @@ public class FirebaseManager {
                 });
     }
 
+    public FirebaseUser getCurrentUser() {
+        return mAuth.getCurrentUser();
+    }
+
     public interface AuthCallback {
         void onSuccess();
 
