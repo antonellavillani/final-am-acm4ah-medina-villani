@@ -103,7 +103,7 @@
             android:fontFamily="@font/TT_Interphases_Light"
             android:hint="@string/EditText_alquiler_seguro_gasolina"
             android:inputType="text"
-            android:minHeight="48dp"
+            android:minHeight="@dimen/medida50"
             android:paddingStart="15dp"
             android:textColorHint="@color/lima"
             android:textSize="15sp"
@@ -149,7 +149,8 @@
             android:layout_marginTop="@dimen/medida35"
             android:backgroundTint="@color/lima"
             android:text="@string/button_agregar"
-            android:textColor="@color/verde_oscuro"/>
+            android:textColor="@color/verde_oscuro"
+            android:onClick="agregarGasto"/>
 
             <!-- ScrollView y TableLayout para mostrar gastos agregados -->
             <ScrollView
@@ -231,7 +232,8 @@
             android:layout_marginTop="@dimen/medida35"
             android:backgroundTint="@color/lima"
             android:text="@string/button_continuar"
-            android:textColor="@color/verde_oscuro"/>
+            android:textColor="@color/verde_oscuro"
+            android:onClick="continuar"/>
 
     </LinearLayout>
 

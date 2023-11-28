@@ -1,0 +1,61 @@
+<!-- res/layout/dialog_editar_gasto.xml -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/green_background"
+        android:gravity="center"
+        android:padding="@dimen/medida20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_modificar_gasto"
+            android:textSize="@dimen/fuenteTitulo"
+            android:gravity="center"
+            android:fontFamily="@font/tt_interphases_extra_bold"
+            android:textColor="@color/lima"/>
+
+        <EditText
+            android:id="@+id/editText_tipo_gasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida20"
+            android:hint="@string/EditText_Hint_tipo_de_gasto"
+            android:autofillHints="yes"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/TT_Interphases_Light"
+            android:ems="17"
+            android:inputType="text"
+            android:minHeight="@dimen/medida50"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/lima"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/editText_monto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida7"
+            android:hint="@string/EditText_Hint_monto"
+            android:autofillHints="yes"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/TT_Interphases_Light"
+            android:ems="17"
+            android:inputType="text"
+            android:minHeight="@dimen/medida50"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/lima"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/boton_confirmar_cambio"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medida20"
+            android:backgroundTint="@color/lima"
+            android:text="Confirmar cambio"
+            android:textColor="@color/verde_oscuro"
+            android:onClick="agregarGasto"/>
+
+    </LinearLayout>
