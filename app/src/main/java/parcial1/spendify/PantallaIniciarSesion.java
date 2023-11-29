@@ -60,7 +60,7 @@ public class PantallaIniciarSesion extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // Inicio de sesión exitoso, el usuario es dirigido a la siguiente pantalla
                         Toast.makeText(PantallaIniciarSesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-                        irAPantallaSiguiente();
+                        irAPantallaSiguiente(email);
                     } else {
                         // Si el inicio de sesión falla, muestra un mensaje al usuario.
                         Toast.makeText(PantallaIniciarSesion.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show();
@@ -69,10 +69,10 @@ public class PantallaIniciarSesion extends AppCompatActivity {
     }
 
     // Función para redirigir a la siguiente pantalla
-    private void irAPantallaSiguiente() {
+    private void irAPantallaSiguiente(String email) {
         Intent intent = new Intent(this, PantallaIngresarSueldo.class);
+        intent.putExtra("correoUsuario", email);
         startActivity(intent);
-        // Asegúrate de cerrar esta actividad si no deseas que el usuario pueda volver a ella con el botón "Atrás"
         finish();
     }
 }

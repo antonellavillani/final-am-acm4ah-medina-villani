@@ -120,10 +120,11 @@
     <string name="imagen_pantalla_ver_gastos">Imagen de Pantalla Ver Gastos</string>
 
     <!-- Botones -->
-    <string name="boton_ingresar_gasto">Ingresar gasto</string>
-    <string name="boton_modificar_gasto">Modificar gasto</string>
-    <string name="boton_eliminar_gasto">Eliminar gasto</string>
+    <string name="opcion_agregar">Agregar</string>
     <string name="boton_volver">Volver</string>
+
+    <!-- dialog_agregar_gasto.xml -->
+    <string name="titulo_agregar_gasto">Agregar gasto</string>
 
     <!-- ==================================================================================================================================================== -->
 

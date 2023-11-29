@@ -57,8 +57,8 @@ public class PantallaCrearCuenta extends AppCompatActivity {
             public void onSuccess() {
                 // Registro exitoso, el usuario es dirigido a PantallaIngresarSueldo
                 Toast.makeText(PantallaCrearCuenta.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                // Redirigir al usuario a PantallaIngresarSueldo
-                irAPantallaIngresarSueldo();
+                // Pasar el correo electrónico a la siguiente pantalla
+                irAPantallaIngresarSueldo(email);
             }
 
             @Override
@@ -70,10 +70,10 @@ public class PantallaCrearCuenta extends AppCompatActivity {
     }
 
     // Función para redirigir a PantallaIngresarSueldo
-    private void irAPantallaIngresarSueldo() {
+    private void irAPantallaIngresarSueldo(String email) {
         Intent intent = new Intent(this, PantallaIngresarSueldo.class);
+        intent.putExtra("correoUsuario", email);
         startActivity(intent);
-        // Asegúrate de cerrar esta actividad si no deseas que el usuario pueda volver a ella con el botón "Atrás"
         finish();
     }
 

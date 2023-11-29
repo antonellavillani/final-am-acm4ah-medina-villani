@@ -16,6 +16,7 @@
     <dimen name="medida28">28dp</dimen>
     <dimen name="medida25">25dp</dimen>
     <dimen name="medida20">20dp</dimen>
+    <dimen name="medida16">16dp</dimen>
     <dimen name="medida10">10dp</dimen>
     <dimen name="medida7">7dp</dimen>
     <dimen name="medida5">5dp</dimen>
