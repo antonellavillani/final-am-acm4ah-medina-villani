@@ -53,6 +53,12 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
             }
         });
 
+        // Obtener el correo electrónico del intent
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("correoUsuario")) {
+            String correoUsuario = intent.getStringExtra("correoUsuario");
+        }
+
         // Configurar el listener para el botón "Siguiente"
         botonSiguiente.setOnClickListener(v -> {
             // Verificar si el EditText tiene un valor
@@ -79,8 +85,8 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
                     firebaseManager.getFirestoreInstance().collection("usuarios").document(userEmail).set(usuario);
 
                     // Ir a PantallaIngresarGastosFijos
-                    Intent intent = new Intent(PantallaIngresarSueldo.this, PantallaGastosFijos.class);
-                    startActivity(intent);
+                    Intent nuevoIntent = new Intent(PantallaIngresarSueldo.this, PantallaGastosFijos.class);
+                    startActivity(nuevoIntent);
                 } else {
                     // El usuario no está autenticado
                     Toast.makeText(PantallaIngresarSueldo.this, "Error: Usuario no autenticado", Toast.LENGTH_SHORT).show();
