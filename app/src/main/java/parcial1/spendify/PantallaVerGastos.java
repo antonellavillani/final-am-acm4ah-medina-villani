@@ -21,6 +21,8 @@ import android.util.TypedValue;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 
+import java.util.ArrayList;
+
 public class PantallaVerGastos extends AppCompatActivity {
 
     private TableLayout tableLayout;
@@ -34,6 +36,18 @@ public class PantallaVerGastos extends AppCompatActivity {
         firebaseManager = FirebaseManager.getInstance();
         currentUser = firebaseManager.getCurrentUser();
         tableLayout = findViewById(R.id.tableLayout);
+
+
+        // Obtener la información de gastos fijos del Intent
+        ArrayList<String> tiposGastos = getIntent().getStringArrayListExtra("tiposGastos");
+        ArrayList<String> montos = getIntent().getStringArrayListExtra("montos");
+
+        // Llenar la tabla con la información de gastos fijos
+        if (tiposGastos != null && montos != null) {
+            for (int i = 0; i < tiposGastos.size(); i++) {
+                agregarFilaTabla(tiposGastos.get(i), montos.get(i));
+            }
+        }
 
         // Ejemplo de agregar filas a la tabla
         agregarFilaTabla("Comida", "$50");

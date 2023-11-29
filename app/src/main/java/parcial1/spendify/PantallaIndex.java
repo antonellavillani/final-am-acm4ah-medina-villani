@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import java.util.ArrayList;
 
 public class PantallaIndex extends AppCompatActivity {
 
@@ -60,6 +61,15 @@ public class PantallaIndex extends AppCompatActivity {
     // PantallaVerGastos
     private void abrirPantallaVerGastos() {
         Intent intent = new Intent(this, PantallaVerGastos.class);
+
+        // Obtener la información de gastos fijos del Intent
+        ArrayList<String> tiposGastos = getIntent().getStringArrayListExtra("tiposGastos");
+        ArrayList<String> montos = getIntent().getStringArrayListExtra("montos");
+
+        // Pasar la información de gastos fijos a PantallaVerGastos
+        intent.putStringArrayListExtra("tiposGastos", tiposGastos);
+        intent.putStringArrayListExtra("montos", montos);
+
         startActivity(intent);
     }
 

@@ -20,6 +20,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+
 public class PantallaGastosFijos extends AppCompatActivity {
 
     private TableLayout tableLayout;
@@ -214,6 +216,25 @@ public class PantallaGastosFijos extends AppCompatActivity {
     public void continuar(View view) {
         // Lógica para continuar a PantallaIndex
         Intent intent = new Intent(this, PantallaIndex.class);
+
+        // Obtener la información de gastos fijos de las filas de la tabla
+        ArrayList<String> tiposGastos = new ArrayList<>();
+        ArrayList<String> montos = new ArrayList<>();
+
+        for (int i = 0; i < tableLayout.getChildCount(); i++) {
+            TableRow row = (TableRow) tableLayout.getChildAt(i);
+
+            TextView cellTipoGasto = (TextView) row.getChildAt(0);
+            TextView cellMonto = (TextView) row.getChildAt(1);
+
+            tiposGastos.add(cellTipoGasto.getText().toString());
+            montos.add(cellMonto.getText().toString());
+        }
+
+        // Agregar la información de gastos fijos al Intent
+        intent.putStringArrayListExtra("tiposGastos", tiposGastos);
+        intent.putStringArrayListExtra("montos", montos);
+
         startActivity(intent);
     }
 
