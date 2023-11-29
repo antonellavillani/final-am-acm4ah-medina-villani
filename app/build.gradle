@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'parcial1.spendify'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "parcial1.spendify"

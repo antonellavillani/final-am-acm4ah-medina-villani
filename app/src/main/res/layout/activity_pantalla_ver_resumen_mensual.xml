@@ -63,7 +63,13 @@
                 android:layout_width="@dimen/medida100"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/imagen_de_pantalla_ver_resumen_mensual"
-                android:src="@drawable/img_pantalla_ver_resumen_mensual" />
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+<!--                android:src="@drawable/img_pantalla_ver_resumen_mensual"-->
+
+
         </LinearLayout>
 
         <!-- LinearLayout para título e información-->
