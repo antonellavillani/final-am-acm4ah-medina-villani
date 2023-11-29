@@ -7,6 +7,18 @@
     tools:context=".PantallaVerGastos">
 
     <!-- LinearLayout que cubre toda la pantalla -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;ScrollView&#xA;                android:id=&quot;@+id/scrollView&quot;&#xA;                android:layout_width=&quot;match_parent&quot;&#xA;                android:layout_height=&quot;0dp&quot;&#xA;                android:layout_weight=&quot;1&quot;&#xA;                android:fillViewport=&quot;true&quot;&#xA;                app:layout_constraintTop_toBottomOf=&quot;@id/boton_agregar&quot;>" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;ScrollView&#xA;                android:id=&quot;@+id/scrollView&quot;&#xA;                android:layout_width=&quot;match_parent&quot;&#xA;                android:layout_height=&quot;0dp&quot;&#xA;                android:layout_weight=&quot;1&quot;&#xA;                android:fillViewport=&quot;true&quot;&#xA;                app:layout_constraintTop_toBottomOf=&quot;@id/boton_agregar&quot;>" />
+
     <LinearLayout
         android:id="@+id/LinearLayout_parent"
         android:layout_width="match_parent"
@@ -87,35 +99,61 @@
                 android:textColor="@color/lima"
                 android:textSize="@dimen/fuenteTituloGrande" />
 
-            <!-- Botón "Ingresar gasto" -->
-            <Button
-                android:id="@+id/boton_ingresar_gasto"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/medida50"
-                android:backgroundTint="@color/lima"
-                android:text="@string/boton_ingresar_gasto"
-                android:textColor="@color/verde_oscuro"/>
+            <!-- ScrollView para permitir el desplazamiento -->
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                app:layout_constraintTop_toBottomOf="@id/boton_agregar">
 
-            <!-- Botón "Modificar gasto" -->
-            <Button
-                android:id="@+id/boton_modificar_gasto"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/medida35"
-                android:backgroundTint="@color/lima"
-                android:text="@string/boton_modificar_gasto"
-                android:textColor="@color/verde_oscuro"/>
+                <!-- TableLayout para mostrar gastos agregados -->
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medida25"
+                    android:stretchColumns="*"
+                    android:background="@drawable/table_background"
+                    android:visibility="gone"> <!-- Por defecto, la tabla estará oculta -->
 
-            <!-- Botón "Eliminar gasto" -->
-            <Button
-                android:id="@+id/boton_eliminar_gasto"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/medida35"
-                android:backgroundTint="@color/lima"
-                android:text="@string/boton_eliminar_gasto"
-                android:textColor="@color/verde_oscuro"/>
+                    <!-- Encabezado de la tabla -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lima">
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/tipo_de_gasto" />
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/monto" />
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/opcion_agregar" />
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/modificar" />
+
+                        <TextView
+                            style="@style/TableHeader"
+                            android:textColor="@color/verde_oscuro"
+                            android:text="@string/eliminar" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </ScrollView>
 
             <!-- Botón "Volver" -->
             <Button
