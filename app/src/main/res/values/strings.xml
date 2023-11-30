@@ -166,6 +166,7 @@
     <string name="boton_modificar_contrasena">Modificar contraseña</string>
     <string name="boton_modificar_ingreso_mensual">Modificar ingreso mensual</string>
     <string name="boton_eliminar_cuenta">Eliminar cuenta</string>
+    <string name="boton_continuar">Continuar</string>
 
 
 </resources>

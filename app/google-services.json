@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "391670180482",
-    "project_id": "spendify-save-smart",
-    "storage_bucket": "spendify-save-smart.appspot.com"
+    "project_number": "53662105261",
+    "project_id": "parcial-am-medina-villani",
+    "storage_bucket": "parcial-am-medina-villani.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:391670180482:android:3b1c0677f53a76265c229b",
+        "mobilesdk_app_id": "1:53662105261:android:6056a0dfd769b2a37c5024",
         "android_client_info": {
-          "package_name": "com.android.application"
+          "package_name": "parcial1.spendify"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCbrdBUSaL5z8ly3LT33_ORgjIxc31j7ws"
+          "current_key": "AIzaSyCWfILdzv9JzfoJVCBkZ-8CW_ll1nt0wI4"
         }
       ],
       "services": {
