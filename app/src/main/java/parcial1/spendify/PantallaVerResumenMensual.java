@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,13 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class PantallaVerResumenMensual extends AppCompatActivity {
-
-    private ArrayList<Double> gastosMensuales; // Supongamos que tienes una lista de gastos mensuales
+    private ArrayList<Double> gastosMensuales; // lista de gastos mensuales
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_ver_resumen_mensual);
+
 
         // Inicializar lista de gastos mensuales
         gastosMensuales = new ArrayList<>();
@@ -41,7 +42,23 @@ public class PantallaVerResumenMensual extends AppCompatActivity {
                 volverAPantallaIndex();
             }
         });
+
+        // Llama a obtenerImagenUrl al iniciar la aplicación
+        obtenerImagenUrl(null);
     }
+
+    public void obtenerImagenUrl(View v){
+        // referencia del ImageView desde el archivo XML
+        ImageView imagenResumenMensual = findViewById(R.id.imagen_ver_resumen_mensual);
+
+        // URL de la imagen
+        String url = "https://programacion.net/files/editor/bar-chart.png";
+
+        // tarea asíncrona para cargar la imagen
+        ImagenUrl imageUrl = new ImagenUrl(imagenResumenMensual);
+        imageUrl.execute(url);
+    }
+
 
     private double calcularTotalGastosMensuales() {
         double total = 0.0;

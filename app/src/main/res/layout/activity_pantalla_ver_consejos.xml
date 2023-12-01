@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:background="@color/green_background"
         android:orientation="vertical"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,35 +21,37 @@
         >
 
     <!-- LinearLayout para el header -->
-    <LinearLayout
-        android:id="@+id/linearLayout_Header"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:background="@color/lima"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imagen_logo"
-            android:layout_width="72dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:contentDescription="@string/logo_app"
-            android:src="@drawable/logo" />
+        <!-- LinearLayout para imagen -->
 
-        <ImageView
-            android:id="@+id/imagen_name_app"
-            android:layout_width="99dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="100dp"
-            android:contentDescription="@string/imagen_nombre_app"
-            android:src="@drawable/name_app" />
+        <LinearLayout
+            android:id="@+id/linearLayout_Header"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/lima"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imagen_logo"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:contentDescription="@string/logo_app"
+                android:src="@drawable/logo" />
 
-    <!-- LinearLayout para imagen -->
-    <LinearLayout
+            <ImageView
+                android:id="@+id/imagen_name_app"
+                android:layout_width="99dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:contentDescription="@string/imagen_nombre_app"
+                android:src="@drawable/name_app" />
+
+        </LinearLayout>
+
+        <LinearLayout
         android:id="@+id/linearLayout_img_consejos"
         android:layout_width="match_parent"
         android:layout_height="@dimen/medida100"
@@ -58,56 +61,96 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+            <ImageView
             android:id="@+id/imagen_consejos"
             android:layout_width="@dimen/medida100"
             android:layout_height="match_parent"
             android:contentDescription="@string/imagen_pantalla_ver_consejos"
             android:src="@drawable/img_pantalla_ver_consejos" />
-    </LinearLayout>
+        </LinearLayout>
 
     <!-- LinearLayout para título e información-->
-    <LinearLayout
-        android:id="@+id/linearLayout_Titulo_ScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center" >
-
-    <!-- Titulo -->
-        <TextView
-            android:id="@+id/titulo_consejos_sobre"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout_Titulo_ScrollView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medida5"
-            android:fontFamily="@font/tt_interphases_extra_bold"
-            android:text="@string/titulo_consejos_sobre"
-            android:textColor="@color/lima"
-            android:textSize="@dimen/fuenteTituloGrande" />
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/titulo_gastos_y_ahorros"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/tt_interphases_extra_bold"
-            android:text="@string/titulo_gastos_y_ahorros"
-            android:textColor="@color/verde_oscuro"
-            android:textSize="@dimen/fuenteTituloGrande"/>
+            <!-- Titulo -->
+
+            <TextView
+                android:id="@+id/titulo_consejos_sobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medida5"
+                android:fontFamily="@font/tt_interphases_extra_bold"
+                android:text="@string/titulo_consejos_sobre"
+                android:textColor="@color/lima"
+                android:textSize="@dimen/fuenteTituloGrande" />
+
+
+
+            <TextView
+                android:id="@+id/titulo_gastos_y_ahorros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tt_interphases_extra_bold"
+                android:text="@string/titulo_gastos_y_ahorros"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="@dimen/fuenteTituloGrande" />
+            </LinearLayout>
 
         <!-- ACÁ VA EL SCROLLVIEW -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="315dp">
 
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <!-- Este LinearLayout se llenará dinámicamente con los textos -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medida25"
+                    android:padding="8dp"
+                    android:text="@string/text_presione_boton"
+                    android:textColor="@color/lima"
+
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Botón "Agregar Consejo" -->
+        <Button
+            android:id="@+id/boton_agregar_consejo"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/medida35"
+            android:layout_marginTop="@dimen/medida25"
+            android:backgroundTint="@color/lima"
+            android:text="@string/agregar_consejo"
+            android:textColor="@color/verde_oscuro"
+            android:onClick="agregarTexto"/>
         <!-- Botón "Volver" -->
         <Button
             android:id="@+id/boton_volver"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medida35"
+            android:layout_marginTop="@dimen/medida7"
+            android:layout_marginLeft="@dimen/medida35"
+
             android:backgroundTint="@color/lima"
             android:text="@string/boton_volver"
-            android:textColor="@color/verde_oscuro"/>
-
-    </LinearLayout>
-
+            android:textColor="@color/verde_oscuro" />
 
     </LinearLayout>
 

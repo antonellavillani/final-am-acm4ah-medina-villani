@@ -103,7 +103,7 @@
             android:autofillHints="yes"
             android:background="@drawable/edit_text_border"
             android:ems="17"
-            android:fontFamily="@font/TT_Interphases_Light"
+            android:fontFamily="@font/tt_interphases_light"
             android:hint="@string/EditText_monto"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
