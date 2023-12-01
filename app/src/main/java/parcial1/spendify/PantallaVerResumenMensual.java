@@ -52,7 +52,7 @@ public class PantallaVerResumenMensual extends AppCompatActivity {
         ImageView imagenResumenMensual = findViewById(R.id.imagen_ver_resumen_mensual);
 
         // URL de la imagen
-        String url = "https://img.freepik.com/vector-premium/icono-grafico-color-estilo-plano-moderno-aislado-sobre-fondo-blanco-simbolo-barra-grafico-diseno-su-sitio-web-aplicacion-logotipo-ui-ilustracion-vectorial-eps10_549897-2625.jpg";
+        String url = "https://programacion.net/files/editor/bar-chart.png";
 
         // tarea asíncrona para cargar la imagen
         ImagenUrl imageUrl = new ImagenUrl(imagenResumenMensual);
