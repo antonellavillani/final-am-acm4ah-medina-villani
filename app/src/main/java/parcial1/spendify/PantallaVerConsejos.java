@@ -58,12 +58,12 @@ public class PantallaVerConsejos extends AppCompatActivity {
 
             // Incrementa el contador para el próximo click
             contadorTextos++;
-            // Verificar si se ha alcanzado el final del array
-            if (contadorTextos > textos.length) {
-                // Desactivar el botón después de agregar todos los textos
-                Button botonAgregarConsejo = findViewById(R.id.boton_agregar_consejo);
-                botonAgregarConsejo.setEnabled(false);
-            }
+//            // Verificar si se ha alcanzado el final del array
+//            if (contadorTextos > textos.length) {
+//                // Desactivar el botón después de agregar todos los textos
+//                Button botonAgregarConsejo = findViewById(R.id.boton_agregar_consejo);
+//                botonAgregarConsejo.setEnabled(false);
+//            }
         } else {
             // Mostrar un mensaje de error cuando no hay más textos
             Toast.makeText(this, "No hay más textos para agregar", Toast.LENGTH_SHORT).show();

@@ -105,7 +105,7 @@
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="315dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -138,7 +138,8 @@
             android:layout_marginTop="@dimen/medida25"
             android:backgroundTint="@color/lima"
             android:text="@string/agregar_consejo"
-            android:textColor="@color/verde_oscuro" />
+            android:textColor="@color/verde_oscuro"
+            android:onClick="agregarTexto"/>
         <!-- Botón "Volver" -->
         <Button
             android:id="@+id/boton_volver"
