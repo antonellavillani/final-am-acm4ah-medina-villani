@@ -7,18 +7,6 @@
     tools:context=".PantallaVerGastos">
 
     <!-- LinearLayout que cubre toda la pantalla -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&lt;ScrollView&#xA;                android:id=&quot;@+id/scrollView&quot;&#xA;                android:layout_width=&quot;match_parent&quot;&#xA;                android:layout_height=&quot;0dp&quot;&#xA;                android:layout_weight=&quot;1&quot;&#xA;                android:fillViewport=&quot;true&quot;&#xA;                app:layout_constraintTop_toBottomOf=&quot;@id/boton_agregar&quot;>" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&lt;ScrollView&#xA;                android:id=&quot;@+id/scrollView&quot;&#xA;                android:layout_width=&quot;match_parent&quot;&#xA;                android:layout_height=&quot;0dp&quot;&#xA;                android:layout_weight=&quot;1&quot;&#xA;                android:fillViewport=&quot;true&quot;&#xA;                app:layout_constraintTop_toBottomOf=&quot;@id/boton_agregar&quot;>" />
-
     <LinearLayout
         android:id="@+id/LinearLayout_parent"
         android:layout_width="match_parent"
