@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
@@ -62,6 +63,21 @@ public class PantallaVerGastos extends AppCompatActivity {
                 volverAPantallaIndex();
             }
         });
+
+        // Llama a obtenerImagenUrl al iniciar la aplicación
+        obtenerImagenUrl(null);
+    }
+
+    public void obtenerImagenUrl(View v){
+        // referencia del ImageView desde el archivo XML
+        ImageView imagenResumenMensual = findViewById(R.id.imagen_ver_gastos);
+
+        // URL de la imagen
+        String url = "https://cdn-icons-png.flaticon.com/512/1751/1751761.png";
+
+        // tarea asíncrona para cargar la imagen
+        ImagenUrl imageUrl = new ImagenUrl(imagenResumenMensual);
+        imageUrl.execute(url);
     }
 
     private void volverAPantallaIndex() {
