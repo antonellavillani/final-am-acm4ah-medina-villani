@@ -56,6 +56,7 @@ public class FirebaseManager {
         return mAuth.getCurrentUser();
     }
 
+
     public void agregarGasto(String userEmail, String tipoGasto, String monto) {
         // Obtener referencia a la colección de gastos para el usuario
         CollectionReference gastosCollection = firestore.collection("usuarios").document(userEmail).collection("gastos");
@@ -137,5 +138,9 @@ public class FirebaseManager {
         void onSuccess();
 
         void onFailure(String errorMessage);
+    }
+
+    public void cerrarSesion() {
+        mAuth.signOut();
     }
 }
