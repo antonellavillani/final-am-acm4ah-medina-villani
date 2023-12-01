@@ -167,6 +167,17 @@
     <string name="boton_modificar_ingreso_mensual">Modificar ingreso mensual</string>
     <string name="boton_eliminar_cuenta">Eliminar cuenta</string>
     <string name="boton_continuar">Continuar</string>
+    <string name="agregar_consejo">Agregar consejo</string>
+    <string name="text_presione_boton">Haz click en agregar consejo para visualizarlos</string>
 
+    <!-- Textos que se agregan en el ScrollView de la pantalla -->
+    <string-array name="textos">
+        <item>Establecer un monto en pesos o dólares y la fecha límite para tener ese dinero ahorrado.</item>
+        <item>Separar el dinero a ahorrar en una cuenta de banco distinta a la que se utiliza. Muchas entidades ofrecen cuentas de ahorro con beneficios para hacer crecer el dinero depositado y que no quede estancado. Por otro lado, esta opción fomentará que el monto ahorrado no se toque para gastos hormigas porque no estará en la cuenta de uso habitual.</item>
+        <item>La tercera opción será distribuir los ingresos mensuales en un excel o planilla de papel y colocar en un apartado los montos que se ahorran mensualmente para llegar a la meta. De esta manera, se tendrá una dimensión del dinero necesario para gastos diarios y extras y el dinero que se debe destinar si o si para ahorrar.</item>
+        <item>Ser flexibles, reprimir un gasto extra un fin de semana no cambiará tu meta solo si este se compensa, es decir, si un fin de semana se gastó el presupuesto de dos, se recomienda ser austeros durante la semana para recuperar esa pérdida y no gastar de más.</item>
+        <item>Comprar en cantidad y frizar aquellos productos que puedan congelarse para ganarle a la inflación y la variación de precios.</item>
+        <item>Planificar las comidas y salidas también ayudará a generar más ahorros o evitar gastar dinero no estipulado. Muchas veces se improvisan comidas express para salir del paso y esos micro gastos tanto de delivery, como de compras en el comercio de cercanía son gastos hormigas que a fin de mes suman mucho más de lo pensado. Planificar las comidas de la semana los domingos o lunes es un buen ejercicio para realizar esta práctica.</item>
+    </string-array>
 
 </resources>
