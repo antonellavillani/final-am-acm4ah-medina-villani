@@ -1,6 +1,8 @@
 package parcial1.spendify;
 
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
@@ -9,9 +11,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.ListenerRegistration;
-import com.google.firebase.firestore.QuerySnapshot;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class FirebaseManager {
     private static FirebaseManager instance;
@@ -20,8 +22,8 @@ public class FirebaseManager {
     private GastoActual gastoActual;
     private ListenerRegistration gastoListener;
 
+    // Constructor
     private FirebaseManager() {
-        // Constructor privado para evitar instanciación directa
         firestore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
     }
@@ -33,30 +35,77 @@ public class FirebaseManager {
         return instance;
     }
 
+    // Obtener la instancia de FirebaseFirestore
     public FirebaseFirestore getFirestoreInstance() {
         return firestore;
     }
 
+    // Obtener la instancia de FirebaseAuth
     public FirebaseAuth getAuthInstance() {
         return mAuth;
     }
 
+    // Registrar un nuevo usuario
     public void registrarUsuario(String email, String password, AuthCallback callback) {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         callback.onSuccess();
                     } else {
-                        callback.onFailure(task.getException().getMessage());
+                        callback.onFailure(Objects.requireNonNull(task.getException()).getMessage());
                     }
                 });
     }
 
+    // Obtener el usuario actual
     public FirebaseUser getCurrentUser() {
         return mAuth.getCurrentUser();
     }
 
+    // Método para verificar la contraseña actual
+    public void verificarContrasenaActual(String contrasenaActual, AuthCallback callback) {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
+        if (currentUser != null) {
+            // Reautenticar al usuario con su contraseña actual
+            AuthCredential credential = EmailAuthProvider.getCredential(Objects.requireNonNull(currentUser.getEmail()), contrasenaActual);
+
+            currentUser.reauthenticate(credential)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // Reautenticación exitosa
+                            callback.onSuccess();
+                        } else {
+                            // Error en la reautenticación, notificar al callback
+                            callback.onFailure(Objects.requireNonNull(task.getException()).getMessage());
+                        }
+                    });
+        } else {
+            // El usuario no está autenticado, notificar al callback
+            callback.onFailure("Usuario no autenticado");
+        }
+    }
+
+    // Cambiar la contraseña del usuario
+    public void cambiarContrasena(String newPassword, AuthCallback callback) {
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if (user != null) {
+            user.updatePassword(newPassword)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            callback.onSuccess();
+                        } else {
+                            callback.onFailure(Objects.requireNonNull(task.getException()).getMessage());
+                        }
+                    });
+        } else {
+            // El usuario no está autenticado, manejar según sea necesario
+            callback.onFailure("Usuario no autenticado");
+        }
+    }
+
+    // Método agregar gasto
     public void agregarGasto(String userEmail, String tipoGasto, String monto) {
         // Obtener referencia a la colección de gastos para el usuario
         CollectionReference gastosCollection = firestore.collection("usuarios").document(userEmail).collection("gastos");
@@ -79,6 +128,7 @@ public class FirebaseManager {
         return gastosCollection.document(tipoGasto).delete();
     }
 
+    // Método actualizar gasto
     public Task<Void> actualizarGasto(String userEmail, String tipoGastoActual, String nuevoTipoGasto, String nuevoMonto) {
         // Obtener referencia al documento del usuario y tipo de gasto actual
         DocumentReference gastoRef = firestore.collection("usuarios").document(userEmail).collection("gastos").document(tipoGastoActual);

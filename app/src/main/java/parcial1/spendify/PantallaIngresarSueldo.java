@@ -82,6 +82,7 @@ public class PantallaIngresarSueldo extends AppCompatActivity {
                     usuario.put("sueldo", sueldo);
 
                     // Agregar el documento a la colección "usuarios" con el correo electrónico como ID
+                    assert userEmail != null;
                     firebaseManager.getFirestoreInstance().collection("usuarios").document(userEmail).set(usuario);
 
                     // Ir a PantallaIngresarGastosFijos

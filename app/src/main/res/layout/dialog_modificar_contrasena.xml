@@ -1,0 +1,81 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/green_background"
+    android:gravity="center"
+    android:padding="@dimen/medida20">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modificar_contrasena"
+        android:textSize="@dimen/fuenteTitulo"
+        android:gravity="center"
+        android:fontFamily="@font/tt_interphases_extra_bold"
+        android:textColor="@color/lima"/>
+
+    <TextView
+        android:id="@+id/textViewContrasenaActual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida35"
+        android:fontFamily="@font/tt_interphases_demi_bold"
+        android:textColor="@color/lima"
+        android:textSize="@dimen/fuenteParrafo"
+        android:text="@string/contrasena_actual"/>
+
+    <EditText
+        android:id="@+id/editText_contrasena_actual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida10"
+        android:hint="@string/EditText_contrasena"
+        android:autofillHints="yes"
+        android:background="@drawable/edit_text_border"
+        android:fontFamily="@font/TT_Interphases_Light"
+        android:ems="17"
+        android:inputType="text"
+        android:minHeight="@dimen/medida50"
+        android:paddingStart="15dp"
+        android:textColorHint="@color/lima"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/textView_contrasena_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida16"
+        android:fontFamily="@font/tt_interphases_demi_bold"
+        android:textColor="@color/lima"
+        android:textSize="@dimen/fuenteParrafo"
+        android:text="@string/contrasena_nueva"/>
+
+    <EditText
+        android:id="@+id/editText_contrasena_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida10"
+        android:hint="@string/EditText_contrasena"
+        android:autofillHints="yes"
+        android:background="@drawable/edit_text_border"
+        android:fontFamily="@font/TT_Interphases_Light"
+        android:ems="17"
+        android:inputType="text"
+        android:minHeight="@dimen/medida50"
+        android:paddingStart="15dp"
+        android:textColorHint="@color/lima"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/boton_aceptar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida20"
+        android:backgroundTint="@color/lima"
+        android:text="@string/boton_aceptar"
+        android:textColor="@color/verde_oscuro"
+        android:onClick="onClick"/>
+</LinearLayout>

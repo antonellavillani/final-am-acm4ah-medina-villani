@@ -151,21 +151,7 @@
     <!-- Descripción de imágenes -->
     <string name="imagen_pantalla_ver_consejos">Imagen de pantalla Ver Consejos</string>
 
-
-    <!-- ==================================================================================================================================================== -->
-
-    <!-- Pantalla Ver Configuración -->
-
-    <!-- Titulo y textos -->
-    <string name="titulo_configuracion">Configuracion</string>
-
-    <!-- Descripción de imágenes -->
-    <string name="imagen_pantalla_configuracion">Imagen pantalla configuracion</string>
-
-    <!-- Botones -->
-    <string name="boton_modificar_contrasena">Modificar contraseña</string>
-    <string name="boton_modificar_ingreso_mensual">Modificar ingreso mensual</string>
-    <string name="boton_eliminar_cuenta">Eliminar cuenta</string>
+    <!-- SrollView -->
     <string name="boton_continuar">Continuar</string>
     <string name="agregar_consejo">Agregar consejo</string>
     <string name="text_presione_boton">Haz click en agregar consejo para visualizarlos</string>
@@ -179,5 +165,25 @@
         <item>Comprar en cantidad y frizar aquellos productos que puedan congelarse para ganarle a la inflación y la variación de precios.</item>
         <item>Planificar las comidas y salidas también ayudará a generar más ahorros o evitar gastar dinero no estipulado. Muchas veces se improvisan comidas express para salir del paso y esos micro gastos tanto de delivery, como de compras en el comercio de cercanía son gastos hormigas que a fin de mes suman mucho más de lo pensado. Planificar las comidas de la semana los domingos o lunes es un buen ejercicio para realizar esta práctica.</item>
     </string-array>
+
+
+    <!-- ==================================================================================================================================================== -->
+
+    <!-- Pantalla Ver Configuración -->
+
+    <!-- Titulo y textos -->
+    <string name="titulo_configuracion">Configuracion</string>
+
+    <!-- Descripción de imágenes -->
+    <string name="imagen_pantalla_configuracion">Imagen pantalla configuracion</string>
+
+    <!-- Acciones -->
+    <string name="modificar_contrasena">Modificar contraseña</string>
+    <string name="contrasena_actual">Contraseña actual</string>
+    <string name="contrasena_nueva">Nueva contraseña</string>
+    <string name="modificar_ingreso_mensual">Modificar ingreso mensual</string>
+    <string name="eliminar_cuenta">Eliminar cuenta</string>
+    <string name="boton_aceptar">Aceptar</string>
+
 
 </resources>

@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/medida50"
                 android:backgroundTint="@color/lima"
-                android:text="@string/boton_modificar_contrasena"
+                android:text="@string/modificar_contrasena"
                 android:textColor="@color/verde_oscuro"/>
 
             <!-- Botón "Modificar ingreso mensual" -->
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/medida35"
                 android:backgroundTint="@color/lima"
-                android:text="@string/boton_modificar_ingreso_mensual"
+                android:text="@string/modificar_ingreso_mensual"
                 android:textColor="@color/verde_oscuro"/>
 
             <!-- Botón "Eliminar cuenta" -->
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/medida35"
                 android:backgroundTint="@color/lima"
-                android:text="@string/boton_eliminar_cuenta"
+                android:text="@string/eliminar_cuenta"
                 android:textColor="@color/verde_oscuro"/>
 
             <!-- Botón "Volver" -->
