@@ -9,6 +9,7 @@
 
     <!-- Título -->
     <TextView
+        android:id="@+id/textView_titulo_dialogModificarContrasena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/modificar_contrasena"
@@ -77,5 +78,5 @@
         android:backgroundTint="@color/lima"
         android:text="@string/boton_aceptar"
         android:textColor="@color/verde_oscuro"
-        android:onClick="onClick"/>
+        android:onClick="onClickAceptar" />
 </LinearLayout>

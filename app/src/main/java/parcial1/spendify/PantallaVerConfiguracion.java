@@ -56,7 +56,7 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
         botonAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickAceptar();
+                onClickAceptar(v);
             }
         });
 
@@ -65,7 +65,7 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
     }
 
     // Método para manejar el botón "Aceptar"
-    public void onClickAceptar() {
+    public void onClickAceptar(View view) {
         // Obtener las contraseñas ingresadas
         EditText editTextContrasenaActual = findViewById(R.id.editText_contrasena_actual);
         EditText editTextNuevaContrasena = findViewById(R.id.editText_contrasena_nueva);
@@ -76,6 +76,7 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
         // Verificar la contraseña actual
         verificarContrasenaActual(contrasenaActual, nuevaContrasena);
     }
+
 
     // Método para verificar la contraseña actual antes de cambiarla
     private void verificarContrasenaActual(String contrasenaActual, String nuevaContrasena) {
