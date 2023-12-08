@@ -99,7 +99,7 @@
 
             <!-- Botón "Modificar ingreso mensual" -->
             <Button
-                android:id="@+id/boton_modificar_ingreso_semanal"
+                android:id="@+id/boton_modificar_ingreso_mensual"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/medida35"

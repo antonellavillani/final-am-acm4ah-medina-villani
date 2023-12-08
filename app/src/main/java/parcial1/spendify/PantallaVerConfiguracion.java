@@ -18,12 +18,21 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_ver_configuracion);
 
-        // OnClickListener para el botón "Modificar Contraseña"
+        // OnClickListener para dialog Modificar contraseña
         Button botonModificarContrasena = findViewById(R.id.boton_modificar_contrasena);
         botonModificarContrasena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mostrarDialogoModificarContrasena();
+            }
+        });
+
+        //OnClickListener para dialog Modificar ingreso mensual
+        Button botonModificarIngreso = findViewById(R.id.boton_modificar_ingreso_mensual);
+        botonModificarIngreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarDialogoModificarIngresoMensual();
             }
         });
 
@@ -56,7 +65,7 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
         botonAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickAceptar(v);
+                onClickAceptarModificarContrasena(v);
             }
         });
 
@@ -65,7 +74,7 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
     }
 
     // Método para manejar el botón "Aceptar"
-    public void onClickAceptar(View view) {
+    public void onClickAceptarModificarContrasena(View view) {
         // Obtener las contraseñas ingresadas
         EditText editTextContrasenaActual = findViewById(R.id.editText_contrasena_actual);
         EditText editTextNuevaContrasena = findViewById(R.id.editText_contrasena_nueva);
@@ -110,6 +119,70 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
                 Toast.makeText(PantallaVerConfiguracion.this, "Error al cambiar la contraseña: " + errorMessage, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    // ---------------------------------------------- Opción "Modificar contraseña" ----------------------------------------------
+
+    String nuevoIngresoMensual;  // Almacenar el nuevo ingreso mensual
+
+    // Método para configurar el nuevo ingreso mensual antes de mostrar el diálogo
+    private void configurarNuevoIngresoMensual(String nuevoIngresoMensual) {
+        this.nuevoIngresoMensual = nuevoIngresoMensual;
+    }
+
+    // Método para mostrar el diálogo de opción Modificar ingreso mensual
+    private void mostrarDialogoModificarIngresoMensual() {
+        // Crear el diálogo
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_modificar_ingreso_mensual, null);
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+
+        // Obtener referencias a los elementos del diálogo
+        EditText editTextNuevoIngresoMensual = dialogView.findViewById(R.id.EditText_nuevoSueldo);
+        Button botonAceptar = dialogView.findViewById(R.id.boton_aceptar);
+
+        // Configurar el botón "Aceptar"
+        botonAceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Obtener el nuevo ingreso mensual desde el EditText
+                String nuevoIngresoMensual = editTextNuevoIngresoMensual.getText().toString();
+
+                // Configurar el nuevo ingreso mensual en la propiedad de clase
+                configurarNuevoIngresoMensual(nuevoIngresoMensual);
+
+                // Llamar al método original para manejar el clic del botón
+                onClickAceptarModificarIngresoMensual(v);
+            }
+        });
+
+        // Mostrar el diálogo
+        dialog.show();
+    }
+
+    // Método para manejar el botón "Aceptar"
+    public void onClickAceptarModificarIngresoMensual(View view) {
+        // Verificar que el nuevo ingreso mensual no esté vacío
+        if (nuevoIngresoMensual != null && !nuevoIngresoMensual.isEmpty()) {
+            // Lógica para actualizar el ingreso mensual en FirebaseManager
+            FirebaseManager.getInstance().actualizarIngresoMensual(nuevoIngresoMensual, new FirebaseManager.AuthCallback() {
+                @Override
+                public void onSuccess() {
+                    // Mensaje de éxito
+                    Toast.makeText(PantallaVerConfiguracion.this, "Ingreso mensual actualizado con éxito", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onFailure(String errorMessage) {
+                    // Mensaje de error
+                    Toast.makeText(PantallaVerConfiguracion.this, "Error al actualizar el ingreso mensual: " + errorMessage, Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            // Mostrar mensaje de error si el nuevo ingreso mensual está vacío
+            Toast.makeText(this, "Ingrese un nuevo ingreso mensual válido", Toast.LENGTH_SHORT).show();
+        }
     }
 
 

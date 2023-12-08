@@ -78,5 +78,5 @@
         android:backgroundTint="@color/lima"
         android:text="@string/boton_aceptar"
         android:textColor="@color/verde_oscuro"
-        android:onClick="onClickAceptar" />
+        android:onClick="onClickAceptarModificarContrasena" />
 </LinearLayout>

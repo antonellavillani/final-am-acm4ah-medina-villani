@@ -1,0 +1,56 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/green_background"
+    android:gravity="center"
+    android:padding="@dimen/medida20">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textView_titulo_dialogModificarIngresoMensual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modificar_ingreso_mensual"
+        android:textSize="@dimen/fuenteTitulo"
+        android:gravity="center"
+        android:fontFamily="@font/tt_interphases_extra_bold"
+        android:textColor="@color/lima"/>
+
+    <TextView
+        android:id="@+id/textViewSueldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida35"
+        android:fontFamily="@font/tt_interphases_demi_bold"
+        android:textColor="@color/lima"
+        android:textSize="@dimen/fuenteParrafo"
+        android:text="@string/sueldo"/>
+
+    <EditText
+        android:id="@+id/EditText_nuevoSueldo"
+        android:layout_width="@dimen/medida360"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida7"
+        android:autofillHints="yes"
+        android:background="@drawable/edit_text_border"
+        android:ems="17"
+        android:fontFamily="@font/TT_Interphases_Light"
+        android:hint="@string/EditText_monto"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:textColorHint="@color/lima"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/boton_aceptar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medida20"
+        android:backgroundTint="@color/lima"
+        android:text="@string/boton_aceptar"
+        android:textColor="@color/verde_oscuro"
+        android:onClick="onClickAceptarModificarIngresoMensual"/>
+</LinearLayout>

@@ -62,6 +62,8 @@ public class FirebaseManager {
         return mAuth.getCurrentUser();
     }
 
+    // ------------------------------------ PantallaVerConfiguracion ------------------------------------
+
     // Método para verificar la contraseña actual
     public void verificarContrasenaActual(String contrasenaActual, AuthCallback callback) {
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -101,6 +103,35 @@ public class FirebaseManager {
                     });
         } else {
             // El usuario no está autenticado, manejar según sea necesario
+            callback.onFailure("Usuario no autenticado");
+        }
+    }
+
+    // Método para actualizar el ingreso mensual del usuario
+    public void actualizarIngresoMensual(String nuevoIngresoMensual, AuthCallback callback) {
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if (user != null) {
+            // Obtener referencia al documento del usuario
+            DocumentReference usuarioRef = firestore.collection("usuarios").document(Objects.requireNonNull(user.getEmail()));
+
+            // Crear un mapa con el nuevo ingreso mensual
+            Map<String, Object> nuevoIngresoMap = new HashMap<>();
+            nuevoIngresoMap.put("ingresoMensual", nuevoIngresoMensual);
+
+            // Actualizar el ingreso mensual en Firestore
+            usuarioRef.update(nuevoIngresoMap)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // Actualización exitosa
+                            callback.onSuccess();
+                        } else {
+                            // Error en la actualización
+                            callback.onFailure(Objects.requireNonNull(task.getException()).getMessage());
+                        }
+                    });
+        } else {
+            // El usuario no está autenticado
             callback.onFailure("Usuario no autenticado");
         }
     }
