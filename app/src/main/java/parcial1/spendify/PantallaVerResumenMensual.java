@@ -2,49 +2,79 @@ package parcial1.spendify;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.Objects;
 
 public class PantallaVerResumenMensual extends AppCompatActivity {
-    private ArrayList<Double> gastosMensuales; // lista de gastos mensuales
+    private ArrayList<Double> gastosMensuales; // Lista de gastos mensuales
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_ver_resumen_mensual);
 
+        // Obtener el usuario actual de Firebase Authentication
+        FirebaseUser usuarioActual = FirebaseManager.getInstance().getCurrentUser();
 
-        // Inicializar lista de gastos mensuales
-        gastosMensuales = new ArrayList<>();
-        // Ejemplo
-        gastosMensuales.add(100.0);
-        gastosMensuales.add(150.0);
+        // Verificar si el usuario está autenticado
+        if (usuarioActual != null) {
+            // Obtener el correo electrónico del usuario
+            String userEmail = usuarioActual.getEmail();
 
-        // Calcula el total de gastos mensuales
-        double totalGastosMensuales = calcularTotalGastosMensuales();
+            // Llama a obtenerImagenUrl al iniciar la aplicación
+            obtenerImagenUrl(null);
 
-        // Muestra el total de gastos mensuales en el TextView correspondiente
-        TextView totalGastosMensualesTextView = findViewById(R.id.total_gastos_mensuales);
-        totalGastosMensualesTextView.setText(getString(R.string.formato_total_de_gastos_mensuales, totalGastosMensuales));
+            // Obtén los gastos mensuales del usuario
+            FirebaseManager.getInstance().obtenerGastosMensuales(userEmail)
+                    .addOnSuccessListener(documentSnapshot -> {
+                        if (documentSnapshot.exists()) { // Si el documento existe, obtiene los datos y realiza los cálculos
+                            Map<String, Object> datosGastosMensuales = documentSnapshot.getData();
+                            assert datosGastosMensuales != null;
+                            gastosMensuales = calcularGastosMensuales(datosGastosMensuales);
 
+                            // Calcular el total de gastos mensuales
+                            double totalGastosMensuales = FirebaseManager.getInstance().calcularTotalGastosMensuales(gastosMensuales);
 
-        // OnClickListener para el botón "Volver"
-        Button botonVolver = findViewById(R.id.boton_volver);
-        botonVolver.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                volverAPantallaIndex();
-            }
-        });
+                            // Mostrar el total de gastos mensuales en el TextView
+                            TextView totalGastosMensualesTextView = findViewById(R.id.total_gastos_mensuales);
+                            totalGastosMensualesTextView.setText(getString(R.string.formato_total_de_gastos_mensuales, totalGastosMensuales));
+                        }
+                    })
+                    .addOnFailureListener(e -> {
+                        // Rrror al obtener los gastos mensuales
+                        Toast.makeText(this, "Error al obtener los gastos mensuales: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    });
 
-        // Llama a obtenerImagenUrl al iniciar la aplicación
-        obtenerImagenUrl(null);
+            // OnClickListener para el botón "Volver"
+            Button botonVolver = findViewById(R.id.boton_volver);
+            botonVolver.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    volverAPantallaIndex();
+                }
+            });
+
+        } else {
+            // El usuario no está autenticado
+            Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show();
+            // Redirigir a PrimeraPantalla
+            Intent intent = new Intent(this, PrimeraPantalla.class);
+            startActivity(intent);
+            finish();
+        }
+
     }
 
     public void obtenerImagenUrl(View v){
@@ -59,13 +89,26 @@ public class PantallaVerResumenMensual extends AppCompatActivity {
         imageUrl.execute(url);
     }
 
+    private ArrayList<Double> calcularGastosMensuales(Map<String, Object> datosGastosMensuales) {
+        // ArrayList para almacenar los gastos mensuales
+        ArrayList<Double> gastosMensuales = new ArrayList<>();
 
-    private double calcularTotalGastosMensuales() {
-        double total = 0.0;
-        for (Double gasto : gastosMensuales) {
-            total += gasto;
+        for (String key : datosGastosMensuales.keySet()) {
+            // Obtener el valor asociado a la clave
+            Object valor = datosGastosMensuales.get(key);
+
+            // Verificar si el valor es numérico antes de intentar convertirlo
+            if (valor instanceof Number) {
+                // Convertir el valor a double y agregarlo a la lista de gastos mensuales
+                double monto = ((Number) valor).doubleValue();
+                gastosMensuales.add(monto);
+            } else {
+                // Si el valor no es numérico, muestra un mensaje de advertencia
+                Log.w("CalcularGastosMensuales", "El valor para la clave " + key + " no es numérico");
+            }
         }
-        return total;
+
+        return gastosMensuales;
     }
 
     private void volverAPantallaIndex() {

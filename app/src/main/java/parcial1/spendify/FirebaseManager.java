@@ -11,6 +11,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.ListenerRegistration;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -251,12 +253,38 @@ public class FirebaseManager {
         }
     }
 
+    // ------------------------------- PantallaVerResumenMensual -------------------------------
+
+    // Obtener los gastos mensuales del usuario
+    public Task<DocumentSnapshot> obtenerGastosMensuales(String userEmail) {
+        DocumentReference gastosMensualesRef = firestore.collection("usuarios").document(userEmail).collection("gastosMensuales").document("gastosMensuales");
+        return gastosMensualesRef.get();
+    }
+
+    // Obtener los gastos fijos de la aplicación
+    public Task<DocumentSnapshot> obtenerGastosFijos() {
+        DocumentReference gastosFijosRef = firestore.collection("gastosFijos").document("gastosFijos");
+        return gastosFijosRef.get();
+    }
+
+    // Método para calcular el total de gastos mensuales
+    public double calcularTotalGastosMensuales(ArrayList<Double> gastosMensuales) {
+        double total = 0.0;
+        for (Double gasto : gastosMensuales) {
+            total += gasto;
+        }
+        return total;
+    }
+
+    // ----------------------------------------------------------------------------------------
+
     public interface AuthCallback {
         void onSuccess();
 
         void onFailure(String errorMessage);
     }
 
+    // Método para cerrar la sesión
     public void cerrarSesion() {
         mAuth.signOut();
     }
