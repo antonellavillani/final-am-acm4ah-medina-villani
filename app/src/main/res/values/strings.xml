@@ -138,6 +138,7 @@
 
     <!-- Descripción de imágenes -->
     <string name="imagen_de_pantalla_ver_resumen_mensual">Imagen de pantalla Ver Resumen Mensual</string>
+    <string name="grafico">Gráfico de Regla 50/30/20</string>
 
 
     <!-- ==================================================================================================================================================== -->

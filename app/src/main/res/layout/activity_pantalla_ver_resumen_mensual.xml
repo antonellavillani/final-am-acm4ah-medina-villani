@@ -128,19 +128,16 @@
 
             </LinearLayout>
 
-            <!-- TextView 'Distribución de gastos' -->
-            <TextView
-                android:id="@+id/texto_distribucion_de_gastos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/medida95"
-                android:layout_marginTop="@dimen/medida35"
-                android:fontFamily="@font/tt_interphases_demi_bold"
-                android:text="@string/texto_distribucion_de_gastos"
-                android:textColor="@color/lima"
-                android:textSize="@dimen/fuenteParrafo" />
+            <!-- ACÁ VA EL GRÁFICO TRAÍDO POR URL -->
+            <ImageView
+                android:id="@+id/imagen_grafico"
+                android:layout_width="@dimen/medida100"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/grafico"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-            <!-- ACÁ VA EL GRÁFICO -->
 
             <!-- Botón "Volver" -->
             <Button
