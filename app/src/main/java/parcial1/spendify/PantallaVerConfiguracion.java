@@ -18,7 +18,7 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_ver_configuracion);
 
-        // OnClickListener para dialog Modificar contraseña
+        // OnClickListener para opción Modificar contraseña
         Button botonModificarContrasena = findViewById(R.id.boton_modificar_contrasena);
         botonModificarContrasena.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,12 +27,21 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
             }
         });
 
-        //OnClickListener para dialog Modificar ingreso mensual
+        //OnClickListener para opción Modificar ingreso mensual
         Button botonModificarIngreso = findViewById(R.id.boton_modificar_ingreso_mensual);
         botonModificarIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mostrarDialogoModificarIngresoMensual();
+            }
+        });
+
+        // OnClickListener para opción Eliminar cuenta
+        Button botonEliminarCuenta = findViewById(R.id.boton_eliminar_cuenta);
+        botonEliminarCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarDialogoEliminarCuenta();
             }
         });
 
@@ -185,6 +194,71 @@ public class PantallaVerConfiguracion extends AppCompatActivity {
         }
     }
 
+    // ---------------------------------------------- Opción "Eliminar cuenta" ----------------------------------------------
+
+    // Método para mostrar el diálogo de opción Eliminar cuenta
+    private void mostrarDialogoEliminarCuenta() {
+        // Crear el diálogo
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_eliminar_cuenta, null);
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+
+        // Obtener referencias a los elementos del diálogo
+        EditText editTextContrasenaActual = dialogView.findViewById(R.id.editText_contrasena_actual);
+        Button botonAceptar = dialogView.findViewById(R.id.boton_aceptar);
+
+        // Configurar el botón "Aceptar"
+        botonAceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickAceptarEliminarCuenta(v);
+                dialog.dismiss(); // Cerrar el diálogo después de hacer clic en Aceptar
+            }
+        });
+
+        // Mostrar el diálogo
+        dialog.show();
+    }
+
+    // Método para manejar el botón "Aceptar" en el diálogo de Eliminar cuenta
+    public void onClickAceptarEliminarCuenta(View view) {
+        // Obtener la contraseña actual desde el EditText
+        EditText editTextContrasenaActual = findViewById(R.id.editText_contrasena_actual);
+        String contrasenaActual = editTextContrasenaActual.getText().toString();
+
+        // Verificar la contraseña actual antes de proceder con la eliminación de la cuenta
+        verificarContrasenaActual(contrasenaActual, new FirebaseManager.AuthCallback() {
+            @Override
+            public void onSuccess() {
+                // Contraseña verificada, proceder con la eliminación de la cuenta
+                eliminarCuenta();
+            }
+
+            @Override
+            public void onFailure(String errorMessage) {
+                // Mensaje de error si la contraseña no es válida
+                Toast.makeText(PantallaVerConfiguracion.this, "Error: " + errorMessage, Toast.LENGTH_SHORT).show();
+            }
+        }.toString());
+    }
+
+    // Método para manejar la eliminación de la cuenta
+    private void eliminarCuenta() {
+        FirebaseManager.getInstance().eliminarCuenta(new FirebaseManager.AuthCallback() {
+            @Override
+            public void onSuccess() {
+                // Eliminación de cuenta exitosa, redirigir al usuario a la pantalla inicial
+                volverAPantallaIndex();
+            }
+
+            @Override
+            public void onFailure(String errorMessage) {
+                // Mensaje de error al eliminar la cuenta
+                Toast.makeText(PantallaVerConfiguracion.this, "Error al eliminar la cuenta: " + errorMessage, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     // Método para volver al Index
     private void volverAPantallaIndex() {

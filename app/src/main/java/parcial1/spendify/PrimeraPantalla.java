@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PrimeraPantallaActivity extends AppCompatActivity {
+public class PrimeraPantalla extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class PrimeraPantallaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Crear una intención para iniciar la actividad PantallaCrearCuenta
-                Intent intent = new Intent(PrimeraPantallaActivity.this, PantallaCrearCuenta.class);
+                Intent intent = new Intent(PrimeraPantalla.this, PantallaCrearCuenta.class);
 
                 // Iniciar la actividad PantallaCrearCuenta
                 startActivity(intent);

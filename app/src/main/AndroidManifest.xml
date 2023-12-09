@@ -39,7 +39,7 @@
             android:name=".PantallaIniciarSesion"
             android:exported="false" /> <!-- ACTIVITY PRIMERA PANTALLA -->
         <activity
-            android:name=".PrimeraPantallaActivity"
+            android:name=".PrimeraPantalla"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

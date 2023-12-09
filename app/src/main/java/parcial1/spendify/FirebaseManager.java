@@ -136,6 +136,42 @@ public class FirebaseManager {
         }
     }
 
+    // Método para eliminar la cuenta del usuario
+    public void eliminarCuenta(AuthCallback callback) {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            // Obtener referencia al documento del usuario
+            DocumentReference usuarioRef = firestore.collection("usuarios").document(Objects.requireNonNull(currentUser.getEmail()));
+
+            // Eliminar el documento del usuario en Firestore
+            usuarioRef.delete()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // Documento del usuario eliminado, elimina la cuenta de Firebase Authentication
+                            currentUser.delete()
+                                    .addOnCompleteListener(authTask -> {
+                                        if (authTask.isSuccessful()) {
+                                            // Eliminación de cuenta exitosa
+                                            callback.onSuccess();
+                                        } else {
+                                            // Error al eliminar la cuenta en Firebase Authentication
+                                            callback.onFailure(Objects.requireNonNull(authTask.getException()).getMessage());
+                                        }
+                                    });
+                        } else {
+                            // Error al eliminar el documento del usuario en Firestore
+                            callback.onFailure(Objects.requireNonNull(task.getException()).getMessage());
+                        }
+                    });
+        } else {
+            // El usuario no está autenticado, manejar según sea necesario
+            callback.onFailure("Usuario no autenticado");
+        }
+    }
+
+    // -------------------------------- Lógica para los gastos mensuales --------------------------------
+
     // Método agregar gasto
     public void agregarGasto(String userEmail, String tipoGasto, String monto) {
         // Obtener referencia a la colección de gastos para el usuario

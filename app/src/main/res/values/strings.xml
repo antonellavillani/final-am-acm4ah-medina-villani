@@ -187,5 +187,7 @@
 
     <string name="sueldo">Sueldo</string>
 
+    <string name="confirmar_contrasena">Ingrese su contraseña para confirmar</string>
+
 
 </resources>
