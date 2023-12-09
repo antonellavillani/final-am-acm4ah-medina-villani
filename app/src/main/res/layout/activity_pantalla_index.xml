@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medida35"
             android:backgroundTint="@color/lima"
-            android:text="@string/boton_cerrar_sesion"
+            android:text="@string/cerrar_sesion"
             android:textColor="@color/verde_oscuro"/>
 
     </LinearLayout>

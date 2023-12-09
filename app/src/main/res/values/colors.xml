@@ -10,6 +10,7 @@
     // Colores oscuros
     <color name="black">#FF000000</color>
     <color name="verde_oscuro">#3B5704</color>
+    <color name="lima_oscuro">#6E755E</color>
 
     // Color del background
     <color name="green_background">#59981A</color>

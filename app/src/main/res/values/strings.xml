@@ -106,7 +106,12 @@
     <string name="boton_ver_resumen_mensual">Ver resumen mensual</string>
     <string name="boton_consejos">Consejos sobre Gastos y Ahorros</string>
     <string name="boton_configuracion">Configuracion</string>
-    <string name="boton_cerrar_sesion">Cerrar sesión</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+
+    <!-- Dialog Cerrar sesion -->
+    <string name="confirmar_cerrar_sesion">¿Deseas cerrar sesión en Spendify?</string>
+    <string name="texto_cerrar_sesion">Puedes volver a iniciar sesión en cualquier momento.</string>
+    <string name="boton_cancelar">Cancelar</string>
 
 
     <!-- ==================================================================================================================================================== -->
