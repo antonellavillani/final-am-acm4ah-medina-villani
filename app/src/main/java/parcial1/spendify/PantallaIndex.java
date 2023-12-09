@@ -64,6 +64,14 @@ public class PantallaIndex extends AppCompatActivity {
             }
         });
 
+        Button botonCerrarSesion = findViewById(R.id.boton_cerrar_sesion);
+        botonCerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarDialogoCerrarSesion();
+            }
+        });
+
     }
 
      // ------------ Funciones para abrir pantallas ------------
