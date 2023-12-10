@@ -92,6 +92,7 @@
     <string name="titulo_modificar_gasto">Modificar gasto</string>
     <string name="EditText_Hint_tipo_de_gasto">Tipo de Gasto</string>
     <string name="EditText_Hint_monto">Monto</string>
+    <string name="texto_confirmar_cambio">Confirmar cambio</string>
 
 
     <!-- ==================================================================================================================================================== -->
