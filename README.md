@@ -2,9 +2,8 @@
 Entrega final de Aplicaciones Móviles.
 Proyecto Spendify - Save Smart.
 
-Integrantes:
+Alumna:
 - Lara Antonella Villani Magrini.
-- Ana Gabriela Medina Espinoza.
 
 Nombre del profesor:
 - Sergio Medina.
